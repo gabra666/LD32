@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterController : MonoBehaviour {
+public class MovementController : MonoBehaviour {
     public float speed = 0.2f;
     public float jumpForce;
 
     private bool canJump = false;
     private bool facingRight = true;
-    private bool punching = false;
+    private bool attacking = false;
     private Vector2 actualMovement;
 
     private Animator animator;
@@ -27,13 +27,15 @@ public class CharacterController : MonoBehaviour {
 
     void FixedUpdate()
     {
-            actualMovement *= speed;
-            setYVelocity();
-            rigidBody.velocity = actualMovement;
-            if ((facingRight && actualMovement.x < 0) || (!facingRight && actualMovement.x > 0))
-                flip();
-            animator.SetFloat("VerticalMovement", actualMovement.y);
-            animator.SetFloat("HorizontalMovement", Mathf.Abs(actualMovement.x));
+        actualMovement *= speed;
+        if (actualMovement.y < 0)
+            actualMovement.x = 0;
+        setYVelocity();
+        rigidBody.velocity = actualMovement;
+        if ((facingRight && actualMovement.x < 0) || (!facingRight && actualMovement.x > 0))
+            flip();
+        animator.SetFloat("VerticalMovement", actualMovement.y);
+        animator.SetFloat("HorizontalMovement", Mathf.Abs(actualMovement.x));
         actualMovement = new Vector3(0, 0, 0);
     }
 
@@ -41,6 +43,8 @@ public class CharacterController : MonoBehaviour {
     {
         if (actualMovement.y > 0 && canJump)
             rigidBody.AddForce(new Vector2(0, jumpForce));
+        else if (actualMovement.y < 0 && canJump)
+            actualMovement.y = actualMovement.y;
         else
             actualMovement.y = rigidBody.velocity.y;
 
@@ -56,20 +60,15 @@ public class CharacterController : MonoBehaviour {
 
     public void setMovementVector(Vector2 movement)
     {
-        if (!punching)
+        if (!attacking)
             actualMovement = movement;
     }
 
-    public void hit()
+    public void blockMovement(bool movementBlocked)
     {
-        punching = true;
-        animator.SetBool("punching", true);
-        actualMovement.x = 0;
-    }
-
-    public void hitStopped()
-    {
-        punching = false;
+        attacking = movementBlocked;
+        if (attacking)
+            actualMovement.x = 0;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

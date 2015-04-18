@@ -8,6 +8,10 @@ public class CamBehaviour : MonoBehaviour {
 
 	public float CamObjX;
 	public float CamObjY;
+	public int CamOffset=3;
+
+	public bool vuelveX=false;
+	public bool vuelveY=true;
 	
 	//Vector3 yy;
 
@@ -20,21 +24,29 @@ public class CamBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
-			CamObjX=player.GetComponent<Transform>().position.x+3;
+			CamObjX=player.GetComponent<Transform>().position.x+CamOffset;
 		}
 		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
-			CamObjX=player.GetComponent<Transform>().position.x-3;
+			CamObjX=player.GetComponent<Transform>().position.x-CamOffset;
 		}
 		if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
-			CamObjY=player.GetComponent<Transform>().position.y-3;
+			CamObjY=player.GetComponent<Transform>().position.y-CamOffset;
 		}
 		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-			CamObjY=player.GetComponent<Transform>().position.y+3;
+			CamObjY=player.GetComponent<Transform>().position.y+CamOffset;
 		}
 
-		if (Input.GetKeyUp (KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow)
-		    || Input.GetKeyUp (KeyCode.D) || Input.GetKeyUp(KeyCode.DownArrow)) {
-			CamObjY=player.GetComponent<Transform>().position.y;
+		if (vuelveY) {
+			if (Input.GetKeyUp (KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow)
+			    || Input.GetKeyUp (KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) {
+				CamObjY=player.GetComponent<Transform>().position.y;
+			}
+		}
+		if (vuelveX) {
+			if (Input.GetKeyUp (KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow)
+			    || Input.GetKeyUp (KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow)) {
+				CamObjX=player.GetComponent<Transform>().position.x;
+			}
 		}
 
 		if (CamObjX>camTransform.position.x) {//R

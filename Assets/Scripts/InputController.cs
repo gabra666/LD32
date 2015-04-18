@@ -1,17 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 public class InputController : MonoBehaviour {
-    CharacterController characterController;
+    MovementController movementController;
+    CombatController combatController;
 
 	// Use this for initialization
 	void Start () {
-        characterController = gameObject.GetComponent<CharacterController>();
+        movementController = gameObject.GetComponent<MovementController>();
+        combatController = gameObject.GetComponent<CombatController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        characterController.setMovementVector(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        movementController.setMovementVector(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
         if (Input.GetKeyDown(KeyCode.Space))
-            characterController.hit();
+            combatController.chargeAttack();
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Debug.Log("dasdsasa");
+            combatController.releaseAttack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            combatController.block(true);
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+            combatController.block(false);
 	}
 }
