@@ -17,10 +17,7 @@ public class InputController : MonoBehaviour {
             combatController.chargeAttack();
 
         if (Input.GetKeyUp(KeyCode.Space))
-        {
-            Debug.Log("dasdsasa");
             combatController.releaseAttack();
-        }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
             combatController.block(true);

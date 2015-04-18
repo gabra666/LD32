@@ -4,9 +4,9 @@ using System.Collections;
 public class MovementController : MonoBehaviour {
     public float speed = 0.2f;
     public float jumpForce;
+    public bool facingRight;
 
     private bool canJump = false;
-    private bool facingRight = true;
     private bool attacking = false;
     private Vector2 actualMovement;
 
@@ -54,7 +54,7 @@ public class MovementController : MonoBehaviour {
     {
         facingRight = !facingRight;
         Quaternion rotation = transform.rotation;
-        rotation.y = facingRight ? 0 : 180;
+        rotation.y =  -(rotation.y - 180);
         transform.rotation = rotation;
     }
 
@@ -81,6 +81,11 @@ public class MovementController : MonoBehaviour {
     {
         if ((transform.position - collision.transform.position).magnitude > 0 && collision.gameObject.layer == 8)
             canJump = false;
+    }
+
+    public bool isFacingRight()
+    {
+        return facingRight;
     }
 
 }
