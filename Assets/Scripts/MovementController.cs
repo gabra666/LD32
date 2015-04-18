@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterController : MonoBehaviour {
+public class MovementController : MonoBehaviour {
     public float speed = 0.2f;
     public float jumpForce;
 
     private bool canJump = false;
     private bool facingRight = true;
-    private bool punching = false;
+    private bool attacking = false;
     private Vector2 actualMovement;
 
     private Animator animator;
@@ -56,20 +56,15 @@ public class CharacterController : MonoBehaviour {
 
     public void setMovementVector(Vector2 movement)
     {
-        if (!punching)
+        if (!attacking)
             actualMovement = movement;
     }
 
-    public void hit()
+    public void characterIsAttacking(bool isAttacking)
     {
-        punching = true;
-        animator.SetBool("punching", true);
-        actualMovement.x = 0;
-    }
-
-    public void hitStopped()
-    {
-        punching = false;
+        attacking = isAttacking;
+        if (attacking)
+            actualMovement.x = 0;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
