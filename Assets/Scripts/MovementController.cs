@@ -12,17 +12,22 @@ public class MovementController : MonoBehaviour {
 
     private Animator animator;
     private Rigidbody2D rigidBody;
+    private GameObject enemyPlayer;
 
 	// Use this for initialization
 	void Start () {
         actualMovement = new Vector3(0, 0, 0);
         animator = gameObject.GetComponent<Animator>();
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        enemyPlayer = GameObject.FindGameObjectWithTag((tag == "Player") ? "Player2" : "Player");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if ((enemyPlayer.transform.position.x - gameObject.transform.position.x) > 0 && !facingRight)
+            flip();
+        else if ((enemyPlayer.transform.position.x - gameObject.transform.position.x) < 0 && facingRight)
+            flip();
 	}
 
     void FixedUpdate()
@@ -57,9 +62,9 @@ public class MovementController : MonoBehaviour {
     private void flip()
     {
         facingRight = !facingRight;
-        Quaternion rotation = transform.rotation;
-        rotation.y =  -(rotation.y - 180);
-        transform.rotation = rotation;
+        Vector3 newScale = transform.localScale;
+        newScale.x *= -1;
+        transform.localScale = newScale;
     }
 
     public void setMovementVector(Vector2 movement)
