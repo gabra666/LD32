@@ -113,4 +113,9 @@ public class CombatController : MonoBehaviour {
         animator.SetTrigger("defenseBroken");
         //movementController.blockMovement(blocking);
     }
+
+    public void damaged()
+    {
+        animator.SetTrigger("damageReceived");
+    }
 }
