@@ -27,7 +27,10 @@ public class CombatController : MonoBehaviour {
             if (!charging)
             {
                 if (timeTillAttackButtonPressed >= 0.25)
+                {
                     animator.SetBool("charging", true);
+                    charging = true;
+                }
             }
             else
                 if (maximunTimeCharging < timeTillAttackButtonPressed)
@@ -43,6 +46,7 @@ public class CombatController : MonoBehaviour {
 
     private void chargeFailed()
     {
+        Debug.Log("dasdadas");
         charging = false;
         attacking = false;
         animator.SetTrigger("chargeFailed");
@@ -51,20 +55,24 @@ public class CombatController : MonoBehaviour {
 
     public void releaseAttack()
     {
-        if (timeTillAttackButtonPressed < 0.25)
+        if (attacking)
         {
-            animator.SetBool("punching", true);
-            makeDamegeIfEnemyHasBeenBeaten(0, 10);
+            if (!charging)
+            {
+                animator.SetBool("punching", true);
+                makeDamegeIfEnemyHasBeenBeaten(0, 10);
+            }
+            else
+            {
+                animator.SetBool("charging", false);
+                makeDamegeIfEnemyHasBeenBeaten(1, 25);
+            }
+
+            timeTillAttackButtonPressed = 0;
+            attacking = false;
+            charging = false;
+            movementController.blockMovement(false);
         }
-        else if (charging)
-        {
-            animator.SetBool("charging", false);
-            makeDamegeIfEnemyHasBeenBeaten(1, 25);
-        }
-        
-        timeTillAttackButtonPressed = 0;
-        attacking = false;
-        movementController.blockMovement(false);
     }
 
     private void makeDamegeIfEnemyHasBeenBeaten(int attackType, int damage)
