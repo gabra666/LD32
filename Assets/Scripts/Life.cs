@@ -23,14 +23,13 @@ public class Life : MonoBehaviour {
     {
         if (!combatController.isBlocking())
         {
-            Debug.Log("daño");
+            combatController.damaged();
             actualLife -= attack.damage;
         }
         else if (combatController.isBlocking() && attack.attackType == 1)
         {
             combatController.breakDefense();
             actualLife -= (float)(0.2 * attack.damage);
-            Debug.Log("defensa rota");
         }
         checkLife();
     }

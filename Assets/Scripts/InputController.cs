@@ -14,15 +14,10 @@ public class InputController : MonoBehaviour {
 	void Update () {
         Vector2 movement = new Vector2(0,0);
         if (Input.GetKey(KeyCode.A))
-        {
-            Debug.Log("DASD");
             movement.x = -1;
-        }
         else if (Input.GetKey(KeyCode.D))
-        {
-            Debug.Log("WERW");
             movement.x = 1;
-        }
+
         if (Input.GetKeyDown(KeyCode.W))
             movement.y = 1;
 

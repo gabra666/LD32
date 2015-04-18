@@ -23,7 +23,7 @@ public class InputController2 : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.RightShift))
             combatController.releaseAttack();
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKey(KeyCode.Return))
             combatController.block(true);
         if (Input.GetKeyUp(KeyCode.Return))
             combatController.block(false);

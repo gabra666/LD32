@@ -3,7 +3,10 @@ using System.Collections;
 using Assets.Scripts;
 
 public class CombatController : MonoBehaviour {
+    public int maximunTimeCharging;
+    public int chargedAttackMultiplier;
 
+    private bool charging = false;
     private bool attacking = false;
     private bool blocking = false;
     private float timeTillAttackButtonPressed = 0;
@@ -21,8 +24,17 @@ public class CombatController : MonoBehaviour {
         if (attacking)
         {
             timeTillAttackButtonPressed += Time.deltaTime;
-            if (timeTillAttackButtonPressed >= 0.25)
-                animator.SetBool("charging", true);
+            if (!charging)
+            {
+                if (timeTillAttackButtonPressed >= 0.25)
+                {
+                    animator.SetBool("charging", true);
+                    charging = true;
+                }
+            }
+            else
+                if (maximunTimeCharging < timeTillAttackButtonPressed)
+                    chargeFailed();
         }
 	}
 
@@ -32,28 +44,43 @@ public class CombatController : MonoBehaviour {
         movementController.blockMovement(attacking);
     }
 
+    private void chargeFailed()
+    {
+        Debug.Log("dasdadas");
+        charging = false;
+        attacking = false;
+        animator.SetTrigger("chargeFailed");
+        animator.SetBool("charging", false);
+    }
+
     public void releaseAttack()
     {
-        if (timeTillAttackButtonPressed < 0.25)
+        if (attacking)
         {
-            animator.SetBool("punching", true);
-            makeDamegeIfEnemyHasBeenBeaten(0, 10);
+            if (!charging)
+            {
+                animator.SetBool("punching", true);
+                makeDamegeIfEnemyHasBeenBeaten(0, 10);
+            }
+            else
+            {
+                animator.SetBool("charging", false);
+                makeDamegeIfEnemyHasBeenBeaten(1, 25);
+            }
+
+            timeTillAttackButtonPressed = 0;
+            attacking = false;
+            charging = false;
+            movementController.blockMovement(false);
         }
-        else
-        {
-            animator.SetBool("charging", false);
-            makeDamegeIfEnemyHasBeenBeaten(1, 25);
-        }
-        
-        timeTillAttackButtonPressed = 0;
-        attacking = false;
-        movementController.blockMovement(false);
     }
 
     private void makeDamegeIfEnemyHasBeenBeaten(int attackType, int damage)
     {
-        LayerMask mask = 2;
-        RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(gameObject.transform.position, new Vector2(movementController.isFacingRight() ? 1 : -1, 0), 0.3f);
+        int rayDirection = movementController.isFacingRight() ? 1 : -1;
+        Vector3 rayOrigin = gameObject.transform.position;
+        rayOrigin.x += (rayDirection * gameObject.GetComponent<Collider2D>().transform.localScale.x / 2);
+        RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(rayOrigin, new Vector2(rayDirection, 0), 0.3f);
         if (objectBeaten.Length > 0)
             foreach (RaycastHit2D raycast in objectBeaten)
             {
@@ -85,5 +112,10 @@ public class CombatController : MonoBehaviour {
         blocking = false;
         animator.SetTrigger("defenseBroken");
         //movementController.blockMovement(blocking);
+    }
+
+    public void damaged()
+    {
+        animator.SetTrigger("damageReceived");
     }
 }
