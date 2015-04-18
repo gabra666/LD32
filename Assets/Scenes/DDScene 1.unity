@@ -524,6 +524,8 @@ MonoBehaviour:
   player: {fileID: 1389668713}
   CamObjX: 0
   CamObjY: 0
+  vuelveX: 0
+  vuelveY: 1
 --- !u!1 &1718617659
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,9 @@ public class CamBehaviour : MonoBehaviour {
 
 	public float CamObjX;
 	public float CamObjY;
+
+	public bool vuelveX=false;
+	public bool vuelveY=true;
 	
 	//Vector3 yy;
 
@@ -32,9 +35,17 @@ public class CamBehaviour : MonoBehaviour {
 			CamObjY=player.GetComponent<Transform>().position.y+3;
 		}
 
-		if (Input.GetKeyUp (KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow)
-		    || Input.GetKeyUp (KeyCode.D) || Input.GetKeyUp(KeyCode.DownArrow)) {
-			CamObjY=player.GetComponent<Transform>().position.y;
+		if (vuelveY) {
+			if (Input.GetKeyUp (KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow)
+			    || Input.GetKeyUp (KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) {
+				CamObjY=player.GetComponent<Transform>().position.y;
+			}
+		}
+		if (vuelveX) {
+			if (Input.GetKeyUp (KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow)
+			    || Input.GetKeyUp (KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow)) {
+				CamObjX=player.GetComponent<Transform>().position.x;
+			}
 		}
 
 		if (CamObjX>camTransform.position.x) {//R
