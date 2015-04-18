@@ -63,6 +63,27 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
+ <Reference Include="RAIN">
+ <HintPath>C:/Users/Miguel Rosso/Documents/LD32/Assets/RAIN/RAIN.dll</HintPath>
+ </Reference>
+ <Reference Include="RAINMetaform">
+ <HintPath>C:/Users/Miguel Rosso/Documents/LD32/Assets/RAIN/RAINMetaform.dll</HintPath>
+ </Reference>
+ <Reference Include="AetherUnity">
+ <HintPath>C:/Users/Miguel Rosso/Documents/LD32/Assets/RAIN/Editor/AetherUnity.dll</HintPath>
+ </Reference>
+ <Reference Include="LegionRestModel">
+ <HintPath>C:/Users/Miguel Rosso/Documents/LD32/Assets/RAIN/Editor/LegionRestModel.dll</HintPath>
+ </Reference>
+ <Reference Include="RAINEditor">
+ <HintPath>C:/Users/Miguel Rosso/Documents/LD32/Assets/RAIN/Editor/RAINEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="RAINMetaformEditor">
+ <HintPath>C:/Users/Miguel Rosso/Documents/LD32/Assets/RAIN/Editor/RAINMetaformEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="RAINUpdater">
+ <HintPath>C:/Users/Miguel Rosso/Documents/LD32/Assets/RAIN/Editor/RAINUpdater.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -92,27 +113,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="RAINUpdater">
- <HintPath>C:/Users/Bryan/Documents/Unity5.0Projects/LD32/Assets/RAIN/Editor/RAINUpdater.dll</HintPath>
- </Reference>
- <Reference Include="RAINMetaformEditor">
- <HintPath>C:/Users/Bryan/Documents/Unity5.0Projects/LD32/Assets/RAIN/Editor/RAINMetaformEditor.dll</HintPath>
- </Reference>
- <Reference Include="RAINMetaform">
- <HintPath>C:/Users/Bryan/Documents/Unity5.0Projects/LD32/Assets/RAIN/RAINMetaform.dll</HintPath>
- </Reference>
- <Reference Include="AetherUnity">
- <HintPath>C:/Users/Bryan/Documents/Unity5.0Projects/LD32/Assets/RAIN/Editor/AetherUnity.dll</HintPath>
- </Reference>
- <Reference Include="RAIN">
- <HintPath>C:/Users/Bryan/Documents/Unity5.0Projects/LD32/Assets/RAIN/RAIN.dll</HintPath>
- </Reference>
- <Reference Include="LegionRestModel">
- <HintPath>C:/Users/Bryan/Documents/Unity5.0Projects/LD32/Assets/RAIN/Editor/LegionRestModel.dll</HintPath>
- </Reference>
- <Reference Include="RAINEditor">
- <HintPath>C:/Users/Bryan/Documents/Unity5.0Projects/LD32/Assets/RAIN/Editor/RAINEditor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
