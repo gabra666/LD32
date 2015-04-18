@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: d515879992c1c8d46a35cde3384a9f61
+timeCreated: 1429353858
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ken_0
+    21300002: ken_1
+    21300004: ken_2
+    21300006: ken_3
+    21300008: ken_4
+    21300010: ken_5
+    21300012: ken_6
+    21300014: ken_7
+    21300016: ken_8
+    21300018: ken_9
+    21300020: ken_10
+    21300022: ken_11
+    21300024: ken_12
+    21300026: ken_13
+    21300028: ken_14
+    21300030: ken_15
+    21300032: ken_16
+    21300034: ken_17
+    21300036: ken_18
+    21300038: ken_19
+    21300040: ken_20
+    21300042: ken_21
+    21300044: ken_22
+    21300046: ken_23
+    21300048: ken_24
+    21300050: ken_25
+    21300052: ken_26
+    21300054: ken_27
+    21300056: ken_28
+    21300058: ken_29
+    21300060: ken_30
+    21300062: ken_31
+    21300064: ken_32
+    21300066: ken_33
+    21300068: ken_34
+    21300070: ken_35
+    21300072: ken_36
+    21300074: ken_37
+    21300076: ken_38
+    21300078: ken_39
+    21300080: ken_40
+    21300082: ken_41
+    21300084: ken_42
+    21300086: ken_43
+    21300088: ken_44
+    21300090: ken_45
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ken_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 720
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 720
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 720
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 640
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 640
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_7
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 640
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_9
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 560
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_10
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 560
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 560
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_13
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 480
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_14
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 480
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_15
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 480
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_16
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 480
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_18
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 400
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_19
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 400
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_20
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 400
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_21
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 400
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_23
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 320
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_24
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 320
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_25
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 320
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_27
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 240
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_28
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 240
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_29
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 240
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_30
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 240
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_32
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 160
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_33
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 160
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_34
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 160
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_35
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 160
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_37
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 80
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_38
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 80
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_39
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 80
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_40
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 80
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_41
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 80
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_42
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 80
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_44
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ken_45
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
