@@ -4,29 +4,32 @@ using System.Collections;
 public class CharacterController : MonoBehaviour {
     public float speed = 0.2f;
     private bool facingRight = true;
-    private bool punching = false;
-    private Vector3 actualMovement;
+    private Vector2 actualMovement;
 
     private Animator animator;
+    private Rigidbody2D rigidBody;
 
 	// Use this for initialization
 	void Start () {
         actualMovement = new Vector3(0, 0, 0);
         animator = gameObject.GetComponent<Animator>();
+        rigidBody = gameObject.GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (punching)
-        {
-            punching = false;
-            animator.SetBool("punching", false);
-        }
-        gameObject.transform.position += actualMovement * speed * Time.deltaTime;
-        animator.SetFloat("HorizontalMovement", Mathf.Abs(actualMovement.x));
+        
+	}
+
+    void FixedUpdate()
+    {
+        actualMovement *= speed;
+        actualMovement.y = rigidBody.velocity.y;
+        rigidBody.velocity = actualMovement * speed;
         if ((facingRight && actualMovement.x < 0) || (!facingRight && actualMovement.x > 0))
             flip();
-	}
+        animator.SetFloat("HorizontalMovement", Mathf.Abs(actualMovement.x));
+    }
 
     private void flip()
     {
@@ -36,14 +39,14 @@ public class CharacterController : MonoBehaviour {
         transform.rotation = rotation;
     }
 
-    public void setMovementVector(Vector3 movement)
+    public void setMovementVector(Vector2 movement)
     {
         actualMovement = movement;
     }
 
     public void hit()
     {
-        punching = true;
         animator.SetBool("punching", true);
     }
+
 }

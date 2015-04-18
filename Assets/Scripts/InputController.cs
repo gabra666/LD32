@@ -10,7 +10,7 @@ public class InputController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        characterController.setMovementVector(new Vector3(Input.GetAxis("Horizontal"), 0, 0));
+        characterController.setMovementVector(new Vector2(Input.GetAxis("Horizontal"), 0));
         if (Input.GetKeyDown(KeyCode.Space))
             characterController.hit();
 	}
