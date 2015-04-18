@@ -24,9 +24,10 @@ public class MovementController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ((enemyPlayer.transform.position.x - gameObject.transform.position.x) > 0 && !facingRight)
+        Vector3 difference = enemyPlayer.transform.position - gameObject.transform.position;
+        if (difference.x > 0 && !facingRight)
             flip();
-        else if ((enemyPlayer.transform.position.x - gameObject.transform.position.x) < 0 && facingRight)
+        else if (difference.x < 0 && facingRight)
             flip();
 	}
 

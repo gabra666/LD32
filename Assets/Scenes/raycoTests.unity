@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ad8d63c006daa48b8bb2c7920e93f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximunTimeCharging: 100
+  maximunTimeCharging: 3
   chargedAttackMultiplier: 1
 --- !u!114 &977240025
 MonoBehaviour:
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ad8d63c006daa48b8bb2c7920e93f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximunTimeCharging: 100
+  maximunTimeCharging: 3
   chargedAttackMultiplier: 1
 --- !u!114 &1037826545
 MonoBehaviour:
