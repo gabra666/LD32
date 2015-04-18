@@ -2,18 +2,29 @@
 using System.Collections;
 public class InputController : MonoBehaviour {
     MovementController movementController;
-    AttackController attackController;
+    CombatController combatController;
 
 	// Use this for initialization
 	void Start () {
         movementController = gameObject.GetComponent<MovementController>();
-        attackController = gameObject.GetComponent<AttackController>();
+        combatController = gameObject.GetComponent<CombatController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         movementController.setMovementVector(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
         if (Input.GetKeyDown(KeyCode.Space))
-            attackController.attack();
+            combatController.chargeAttack();
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Debug.Log("dasdsasa");
+            combatController.releaseAttack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            combatController.block(true);
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+            combatController.block(false);
 	}
 }
