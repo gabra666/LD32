@@ -200,6 +200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ad8d63c006daa48b8bb2c7920e93f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maximunTimeCharging: 0
+  chargedAttackMultiplier: 0
 --- !u!114 &977240025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +260,7 @@ GameObject:
   - 95: {fileID: 1037826543}
   - 114: {fileID: 1037826544}
   - 114: {fileID: 1037826545}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Ken
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -384,6 +386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ad8d63c006daa48b8bb2c7920e93f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maximunTimeCharging: 0
+  chargedAttackMultiplier: 0
 --- !u!114 &1037826545
 MonoBehaviour:
   m_ObjectHideFlags: 0

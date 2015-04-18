@@ -3,7 +3,10 @@ using System.Collections;
 using Assets.Scripts;
 
 public class CombatController : MonoBehaviour {
+    public int maximunTimeCharging;
+    public int chargedAttackMultiplier;
 
+    private bool charging = false;
     private bool attacking = false;
     private bool blocking = false;
     private float timeTillAttackButtonPressed = 0;
@@ -21,8 +24,14 @@ public class CombatController : MonoBehaviour {
         if (attacking)
         {
             timeTillAttackButtonPressed += Time.deltaTime;
-            if (timeTillAttackButtonPressed >= 0.25)
-                animator.SetBool("charging", true);
+            if (!charging)
+            {
+                if (timeTillAttackButtonPressed >= 0.25)
+                    animator.SetBool("charging", true);
+            }
+            else
+                if (maximunTimeCharging < timeTillAttackButtonPressed)
+                    chargeFailed();
         }
 	}
 
@@ -32,6 +41,14 @@ public class CombatController : MonoBehaviour {
         movementController.blockMovement(attacking);
     }
 
+    private void chargeFailed()
+    {
+        charging = false;
+        attacking = false;
+        animator.SetTrigger("chargeFailed");
+        animator.SetBool("charging", false);
+    }
+
     public void releaseAttack()
     {
         if (timeTillAttackButtonPressed < 0.25)
@@ -39,7 +56,7 @@ public class CombatController : MonoBehaviour {
             animator.SetBool("punching", true);
             makeDamegeIfEnemyHasBeenBeaten(0, 10);
         }
-        else
+        else if (charging)
         {
             animator.SetBool("charging", false);
             makeDamegeIfEnemyHasBeenBeaten(1, 25);
@@ -52,8 +69,10 @@ public class CombatController : MonoBehaviour {
 
     private void makeDamegeIfEnemyHasBeenBeaten(int attackType, int damage)
     {
-        LayerMask mask = 2;
-        RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(gameObject.transform.position, new Vector2(movementController.isFacingRight() ? 1 : -1, 0), 0.3f);
+        int rayDirection = movementController.isFacingRight() ? 1 : -1;
+        Vector3 rayOrigin = gameObject.transform.position;
+        rayOrigin.x += (rayDirection * gameObject.GetComponent<Collider2D>().transform.localScale.x / 2);
+        RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(rayOrigin, new Vector2(rayDirection, 0), 0.3f);
         if (objectBeaten.Length > 0)
             foreach (RaycastHit2D raycast in objectBeaten)
             {

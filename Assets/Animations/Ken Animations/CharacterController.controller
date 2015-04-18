@@ -44,6 +44,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: damageReceived
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -641,6 +647,23 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 7400000, guid: ec968f4a87275b647bcbc57603e316c2, type: 2}
   m_Tag: 
+--- !u!1102 &110234654
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: DamageReceived
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: aed837040d27a2f4eacd9368b7938817, type: 2}
+  m_Tag: 
 --- !u!1102 &110235640
 AnimatorState:
   serializedVersion: 5
@@ -795,6 +818,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 110213082}
     m_Position: {x: 552, y: 192, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 110234654}
+    m_Position: {x: 360, y: 432, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110190848}
