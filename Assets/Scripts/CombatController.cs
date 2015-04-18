@@ -46,11 +46,10 @@ public class CombatController : MonoBehaviour {
 
     private void chargeFailed()
     {
-        Debug.Log("dasdadas");
         charging = false;
         attacking = false;
         animator.SetTrigger("chargeFailed");
-        animator.SetBool("charging", false);
+        timeTillAttackButtonPressed = 0;
     }
 
     public void releaseAttack()
