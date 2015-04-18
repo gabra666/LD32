@@ -3,7 +3,11 @@ using System.Collections;
 
 public class CharacterController : MonoBehaviour {
     public float speed = 0.2f;
+    public float jumpForce;
+
+    private bool canJump = false;
     private bool facingRight = true;
+    private bool punching = false;
     private Vector2 actualMovement;
 
     private Animator animator;
@@ -23,12 +27,23 @@ public class CharacterController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        actualMovement *= speed;
-        actualMovement.y = rigidBody.velocity.y;
-        rigidBody.velocity = actualMovement * speed;
-        if ((facingRight && actualMovement.x < 0) || (!facingRight && actualMovement.x > 0))
-            flip();
-        animator.SetFloat("HorizontalMovement", Mathf.Abs(actualMovement.x));
+            actualMovement *= speed;
+            setYVelocity();
+            rigidBody.velocity = actualMovement;
+            if ((facingRight && actualMovement.x < 0) || (!facingRight && actualMovement.x > 0))
+                flip();
+            animator.SetFloat("VerticalMovement", actualMovement.y);
+            animator.SetFloat("HorizontalMovement", Mathf.Abs(actualMovement.x));
+        actualMovement = new Vector3(0, 0, 0);
+    }
+
+    private void setYVelocity()
+    {
+        if (actualMovement.y > 0 && canJump)
+            rigidBody.AddForce(new Vector2(0, jumpForce));
+        else
+            actualMovement.y = rigidBody.velocity.y;
+
     }
 
     private void flip()
@@ -41,12 +56,32 @@ public class CharacterController : MonoBehaviour {
 
     public void setMovementVector(Vector2 movement)
     {
-        actualMovement = movement;
+        if (!punching)
+            actualMovement = movement;
     }
 
     public void hit()
     {
+        punching = true;
         animator.SetBool("punching", true);
+        actualMovement.x = 0;
+    }
+
+    public void hitStopped()
+    {
+        punching = false;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if ((transform.position - collision.transform.position).magnitude > 0 && collision.gameObject.layer == 8)
+            canJump = true;
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if ((transform.position - collision.transform.position).magnitude > 0 && collision.gameObject.layer == 8)
+            canJump = false;
     }
 
 }
