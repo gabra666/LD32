@@ -18,7 +18,7 @@ public class AxelController : MonoBehaviour {
 		moveX = Input.GetAxis("Horizontal");
 		moveY = Input.GetAxis("Vertical");
 
-		Debug.Log(moveX);
+		//Debug.Log(moveX);
 		if(moveX != 0){
 			anim.SetFloat("Speed",Mathf.Abs(moveX));
 		}
