@@ -12,16 +12,31 @@ public class InputController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        movementController.setMovementVector(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
-        if (Input.GetKeyDown(KeyCode.Space))
+        Vector2 movement = new Vector2(0,0);
+        if (Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("DASD");
+            movement.x = -1;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            Debug.Log("WERW");
+            movement.x = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+            movement.y = 1;
+
+        movementController.setMovementVector(movement);
+
+        if (Input.GetKeyDown(KeyCode.F))
             combatController.chargeAttack();
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.F))
             combatController.releaseAttack();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.G))
             combatController.block(true);
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.G))
             combatController.block(false);
 	}
 }

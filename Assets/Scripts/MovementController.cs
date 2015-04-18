@@ -32,8 +32,10 @@ public class MovementController : MonoBehaviour {
             actualMovement.x = 0;
         setYVelocity();
         rigidBody.velocity = actualMovement;
+        /*
         if ((facingRight && actualMovement.x < 0) || (!facingRight && actualMovement.x > 0))
             flip();
+         */
         animator.SetFloat("VerticalMovement", actualMovement.y);
         animator.SetFloat("HorizontalMovement", Mathf.Abs(actualMovement.x));
         actualMovement = new Vector3(0, 0, 0);
@@ -43,8 +45,10 @@ public class MovementController : MonoBehaviour {
     {
         if (actualMovement.y > 0 && canJump)
             rigidBody.AddForce(new Vector2(0, jumpForce));
+            /*
         else if (actualMovement.y < 0 && canJump)
             actualMovement.y = actualMovement.y;
+             * */
         else
             actualMovement.y = rigidBody.velocity.y;
 

@@ -101,7 +101,6 @@ GameObject:
   - 114: {fileID: 977240025}
   - 114: {fileID: 977240024}
   - 114: {fileID: 977240023}
-  - 114: {fileID: 977240027}
   - 114: {fileID: 977240026}
   - 95: {fileID: 977240028}
   m_Layer: 0
@@ -212,8 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5c57799b40d7e46969ea5857a6896a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .200000003
-  jumpForce: 0
+  speed: 1.5
+  jumpForce: 200
   facingRight: 0
 --- !u!114 &977240026
 MonoBehaviour:
@@ -224,17 +223,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74464fa852effae44820551b48f59b80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &977240027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 977240018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5473ad979d4b694b83ff1ac17cad34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &977240028

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InputTest : MonoBehaviour {
+public class InputController2 : MonoBehaviour {
 
     MovementController movementController;
     CombatController combatController;
@@ -16,9 +16,16 @@ public class InputTest : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        movementController.setMovementVector(new Vector2(Input.GetAxis("Horizontal"), Input.GetKeyDown(KeyCode.UpArrow) ? 1 : 0));
+        if (Input.GetKeyDown(KeyCode.RightShift))
+            combatController.chargeAttack();
+
+        if (Input.GetKeyUp(KeyCode.RightShift))
+            combatController.releaseAttack();
+
+        if (Input.GetKeyDown(KeyCode.Return))
             combatController.block(true);
-        if (Input.GetKeyUp(KeyCode.M))
+        if (Input.GetKeyUp(KeyCode.Return))
             combatController.block(false);
     }
 }
