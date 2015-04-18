@@ -1,0 +1,44 @@
+﻿using UnityEngine;
+using System.Collections;
+using Assets.Scripts;
+
+public class Life : MonoBehaviour {
+    public int maximunLife;
+    public float actualLife;
+
+    private CombatController combatController;
+
+	// Use this for initialization
+	void Start () {
+        actualLife = maximunLife;
+        combatController = gameObject.GetComponent<CombatController>();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+    void ReceiveDamage(Attack attack)
+    {
+        if (!combatController.isBlocking())
+        {
+            Debug.Log("daño");
+            actualLife -= attack.damage;
+        }
+        else if (combatController.isBlocking() && attack.attackType == 1)
+        {
+            combatController.breakDefense();
+            actualLife -= (float)(0.2 * attack.damage);
+            Debug.Log("defensa rota");
+        }
+        checkLife();
+    }
+
+    private void checkLife()
+    {
+        if (actualLife <= 0)
+        { 
+        }
+    }
+}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
 public class CombatController : MonoBehaviour {
 
@@ -34,12 +35,31 @@ public class CombatController : MonoBehaviour {
     public void releaseAttack()
     {
         if (timeTillAttackButtonPressed < 0.25)
+        {
             animator.SetBool("punching", true);
+            makeDamegeIfEnemyHasBeenBeaten(0, 10);
+        }
         else
+        {
             animator.SetBool("charging", false);
+            makeDamegeIfEnemyHasBeenBeaten(1, 25);
+        }
+        
         timeTillAttackButtonPressed = 0;
         attacking = false;
         movementController.blockMovement(false);
+    }
+
+    private void makeDamegeIfEnemyHasBeenBeaten(int attackType, int damage)
+    {
+        LayerMask mask = 2;
+        RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(gameObject.transform.position, new Vector2(movementController.isFacingRight() ? 1 : -1, 0), 0.3f);
+        if (objectBeaten.Length > 0)
+            foreach (RaycastHit2D raycast in objectBeaten)
+            {
+                raycast.collider.gameObject.SendMessage("ReceiveDamage", new Attack(attackType, damage), SendMessageOptions.DontRequireReceiver);
+                Debug.Log(raycast.collider.gameObject.name);
+            }
     }
 
     public void block(bool block)
@@ -53,5 +73,17 @@ public class CombatController : MonoBehaviour {
     {
         attacking = false;
         movementController.blockMovement(attacking);
+    }
+
+    public bool isBlocking()
+    {
+        return blocking;
+    }
+
+    public void breakDefense()
+    {
+        blocking = false;
+        animator.SetTrigger("defenseBroken");
+        //movementController.blockMovement(blocking);
     }
 }

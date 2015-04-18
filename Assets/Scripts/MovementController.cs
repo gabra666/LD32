@@ -4,9 +4,9 @@ using System.Collections;
 public class MovementController : MonoBehaviour {
     public float speed = 0.2f;
     public float jumpForce;
+    public bool facingRight;
 
     private bool canJump = false;
-    private bool facingRight = true;
     private bool attacking = false;
     private Vector2 actualMovement;
 
@@ -32,8 +32,10 @@ public class MovementController : MonoBehaviour {
             actualMovement.x = 0;
         setYVelocity();
         rigidBody.velocity = actualMovement;
+        /*
         if ((facingRight && actualMovement.x < 0) || (!facingRight && actualMovement.x > 0))
             flip();
+         */
         animator.SetFloat("VerticalMovement", actualMovement.y);
         animator.SetFloat("HorizontalMovement", Mathf.Abs(actualMovement.x));
         actualMovement = new Vector3(0, 0, 0);
@@ -43,8 +45,10 @@ public class MovementController : MonoBehaviour {
     {
         if (actualMovement.y > 0 && canJump)
             rigidBody.AddForce(new Vector2(0, jumpForce));
+            /*
         else if (actualMovement.y < 0 && canJump)
             actualMovement.y = actualMovement.y;
+             * */
         else
             actualMovement.y = rigidBody.velocity.y;
 
@@ -54,7 +58,7 @@ public class MovementController : MonoBehaviour {
     {
         facingRight = !facingRight;
         Quaternion rotation = transform.rotation;
-        rotation.y = facingRight ? 0 : 180;
+        rotation.y =  -(rotation.y - 180);
         transform.rotation = rotation;
     }
 
@@ -81,6 +85,11 @@ public class MovementController : MonoBehaviour {
     {
         if ((transform.position - collision.transform.position).magnitude > 0 && collision.gameObject.layer == 8)
             canJump = false;
+    }
+
+    public bool isFacingRight()
+    {
+        return facingRight;
     }
 
 }
