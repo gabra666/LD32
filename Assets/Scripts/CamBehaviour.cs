@@ -32,6 +32,11 @@ public class CamBehaviour : MonoBehaviour {
 			CamObjY=player.GetComponent<Transform>().position.y+3;
 		}
 
+		if (Input.GetKeyUp (KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow)
+		    || Input.GetKeyUp (KeyCode.D) || Input.GetKeyUp(KeyCode.DownArrow)) {
+			CamObjY=player.GetComponent<Transform>().position.y;
+		}
+
 		if (CamObjX>camTransform.position.x) {//R
 			camTransform.position=new Vector3(camTransform.position.x-((camTransform.position.x-CamObjX)*0.1f),camTransform.position.y,camTransform.position.z);
 		}
