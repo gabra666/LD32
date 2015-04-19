@@ -101,8 +101,9 @@ GameObject:
   - 114: {fileID: 977240025}
   - 114: {fileID: 977240024}
   - 114: {fileID: 977240023}
-  - 95: {fileID: 977240028}
   - 114: {fileID: 977240026}
+  - 95: {fileID: 977240028}
+  - 82: {fileID: 977240027}
   m_Layer: 9
   m_Name: AIEnemy
   m_TagString: Player2
@@ -202,6 +203,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximunTimeCharging: 3
   chargedAttackMultiplier: 1
+  attackRange: 0
+  chargin_snd: {fileID: 977240027}
+  attack_snd: {fileID: 977240027}
+  chargedAttack_snd: {fileID: 977240027}
+  grito_snd: {fileID: 977240027}
+  bloqueado_snd: {fileID: 977240027}
 --- !u!114 &977240025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +235,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeEnoughDistance: .5
+  timeBetweenAttacks: 2
+  blockProbability: .75
+  chargeAttackProbability: .25
+--- !u!82 &977240027
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 977240018}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8f3f97dec64faa44e992df56e993df5f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &977240028
 Animator:
   serializedVersion: 3
@@ -261,6 +340,7 @@ GameObject:
   - 95: {fileID: 1037826543}
   - 114: {fileID: 1037826544}
   - 114: {fileID: 1037826545}
+  - 82: {fileID: 1037826546}
   m_Layer: 9
   m_Name: Ken
   m_TagString: Player
@@ -389,6 +469,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximunTimeCharging: 3
   chargedAttackMultiplier: 1
+  attackRange: 0
+  chargin_snd: {fileID: 1037826546}
+  attack_snd: {fileID: 1037826546}
+  chargedAttack_snd: {fileID: 1037826546}
+  grito_snd: {fileID: 1037826546}
+  bloqueado_snd: {fileID: 1037826546}
 --- !u!114 &1037826545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,6 +488,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximunLife: 100
   actualLife: 0
+--- !u!82 &1037826546
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037826536}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 754ff621bfd543d439917f746637965c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1248422492
 GameObject:
   m_ObjectHideFlags: 0
