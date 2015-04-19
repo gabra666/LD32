@@ -1,12 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FightFinishedController : MonoBehaviour {
+public class GameController : MonoBehaviour {
+    GameObject player1;
+    GameObject player2;
 
 	// Use this for initialization
 	void Start () {
+        player1 = GameObject.FindGameObjectWithTag("Player");
+        player2 = GameObject.FindGameObjectWithTag("Player2");
+
+        player1.name = StorageManager.Instance.Player1CharacterName;
+        player2.name = StorageManager.Instance.Player2CharacterName;
+
         if (StorageManager.Instance.NumberOfPlayers == 2)
-            GameObject.FindGameObjectWithTag("Player2").AddComponent<InputController>();
+            player2.AddComponent<InputController>();
+        else
+            player2.AddComponent<AIController>();
 	}
 	
 	// Update is called once per frame
