@@ -11,6 +11,8 @@ public class FinishPunch : StateMachineBehaviour {
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	    animator.SetBool("punching", false);
+        if (stateInfo.normalizedTime <= 0.4 && stateInfo.normalizedTime <= 0.6)
+            GameObject.Find("PunchMessagesController").SendMessage("Show", animator.gameObject);
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
