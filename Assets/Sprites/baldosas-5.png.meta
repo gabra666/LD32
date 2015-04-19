@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 380e223b6bb734d378f1d62addb017ea
-timeCreated: 1429440773
+timeCreated: 1429445479
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -163,6 +163,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_7
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 1524
+        width: 260
+        height: 261
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 1, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
