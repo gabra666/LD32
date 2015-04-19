@@ -9,13 +9,17 @@ public class GameController : MonoBehaviour {
     public Sprite character1Portrait;
     public Sprite character2Portrait;
 
-    private GameObject player1;
-    private GameObject player2;
+    private  GameObject player1;
+    private  GameObject player2;
 
 	// Use this for initialization
 	void Start () {
+        //StorageManager.Instance.Player1CharacterName
         player1 = GameObject.FindGameObjectWithTag("Player");
         player2 = GameObject.FindGameObjectWithTag("Player2");
+
+        player1.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Rober") as RuntimeAnimatorController;
+        player2.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Rober") as RuntimeAnimatorController;
 
         player1.name = StorageManager.Instance.Player1CharacterName;
         player2.name = StorageManager.Instance.Player2CharacterName;
