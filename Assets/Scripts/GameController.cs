@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameController : MonoBehaviour {
-    GameObject player1;
-    GameObject player2;
+    public GameObject fightFinishedGUI;
+    public GameObject player1Portrait;
+    public GameObject player2Portrait;
+    public Sprite character1Portrait;
+    public Sprite character2Portrait;
+
+    private GameObject player1;
+    private GameObject player2;
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +19,9 @@ public class GameController : MonoBehaviour {
 
         player1.name = StorageManager.Instance.Player1CharacterName;
         player2.name = StorageManager.Instance.Player2CharacterName;
+
+        player1Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player2CharacterName == "Character1") ? character1Portrait : character2Portrait);
+        player2Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player2CharacterName == "Character1") ? character1Portrait : character2Portrait);
 
         if (StorageManager.Instance.NumberOfPlayers == 2)
             player2.AddComponent<InputController>();
@@ -36,10 +46,6 @@ public class GameController : MonoBehaviour {
         winner.GetComponent<Animator>().SetTrigger("win");
         winner.GetComponent<InputController>().enabled = false;
 
-        showFightFinsishedMessage(winner.name);
-    }
-
-    private void showFightFinsishedMessage(string winnerName)
-    {
+        fightFinishedGUI.SendMessage("FightFinished", winner.name);
     }
 }
