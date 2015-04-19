@@ -26,6 +26,9 @@ public class GameController : MonoBehaviour {
 
         player1.tag = "Player";
         player2.tag = "Player2";
+
+        player1.SetActive(true);
+        player2.SetActive(true);
     }
 
 	// Use this for initialization

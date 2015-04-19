@@ -24,7 +24,7 @@ public class MovementController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(tag + " " + enemyPlayer.tag);
+        Debug.Log(tag + " " + enemyPlayer.tag + " " + facingRight);
         enemyPlayer = GameObject.FindGameObjectWithTag((tag == "Player") ? "Player2" : "Player");
         Vector3 difference = enemyPlayer.transform.position - gameObject.transform.position;
         if (difference.x > 0 && !facingRight)
@@ -64,6 +64,7 @@ public class MovementController : MonoBehaviour {
 
     private void flip()
     {
+        Debug.Log("dasdsda");
         facingRight = !facingRight;
         Vector3 newScale = transform.localScale;
         newScale.x *= -1;
