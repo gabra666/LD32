@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour {
     public GameObject player2Portrait;
     public Sprite character1Portrait;
     public Sprite character2Portrait;
+    public Sprite blackChest;
+    public Sprite blackBack;
 
     private  GameObject player1;
     private  GameObject player2;
@@ -20,6 +22,28 @@ public class GameController : MonoBehaviour {
 
         player1.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(StorageManager.Instance.Player1CharacterName) as RuntimeAnimatorController;
         player2.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(StorageManager.Instance.Player2CharacterName) as RuntimeAnimatorController;
+
+        if (StorageManager.Instance.Player1CharacterName != "Rober")
+        {
+            GameObject.Find("WhiteHip1").SetActive(false);
+            GameObject.Find("WhiteChest1").SetActive(false);
+        }
+        else
+        {
+            GameObject.Find("BlackHip1").SetActive(false);
+            GameObject.Find("BlackChest1").SetActive(false);
+        }
+
+        if (StorageManager.Instance.Player2CharacterName != "Rober")
+        {
+            GameObject.Find("WhiteHip2").SetActive(false);
+            GameObject.Find("WhiteChest2").SetActive(false);
+        }
+        else
+        {
+            GameObject.Find("BlackHip2").SetActive(false);
+            GameObject.Find("BlackChest2").SetActive(false);
+        }
 
         player1Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player1CharacterName == "Rober") ? character1Portrait : character2Portrait);
         player2Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player2CharacterName == "Rober") ? character1Portrait : character2Portrait);
