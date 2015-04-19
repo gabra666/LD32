@@ -1022,11 +1022,11 @@ Prefab:
     - target: {fileID: 11411822, guid: f3b1bad20a02bca4f9df3bbe1ce873d4, type: 2}
       propertyPath: player1Portrait
       value: 
-      objectReference: {fileID: 864365109}
+      objectReference: {fileID: 233673513}
     - target: {fileID: 11411822, guid: f3b1bad20a02bca4f9df3bbe1ce873d4, type: 2}
       propertyPath: player2Portrait
       value: 
-      objectReference: {fileID: 864365107}
+      objectReference: {fileID: 1513235044}
     - target: {fileID: 11411822, guid: f3b1bad20a02bca4f9df3bbe1ce873d4, type: 2}
       propertyPath: player1Spawn
       value: 
@@ -3913,11 +3913,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 485240, guid: 5703bea7331411f4a9c2e3551d098642, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 48.1491394
+      value: 40.2200012
       objectReference: {fileID: 0}
     - target: {fileID: 485240, guid: 5703bea7331411f4a9c2e3551d098642, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.46160626
+      value: 1.46000004
       objectReference: {fileID: 0}
     - target: {fileID: 485240, guid: 5703bea7331411f4a9c2e3551d098642, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4963,7 +4963,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5886fe1d5568c4e2a8b6e25f640e275f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &1672761711 stripped
+--- !u!114 &1672761711
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11461032, guid: 5703bea7331411f4a9c2e3551d098642,
     type: 2}
@@ -5662,7 +5662,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1288836409}
   m_RootOrder: 1
---- !u!114 &1984416181 stripped
+--- !u!114 &1984416181
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11461032, guid: 5703bea7331411f4a9c2e3551d098642,
     type: 2}
