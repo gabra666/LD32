@@ -1623,7 +1623,7 @@ MonoBehaviour:
   maxDistance: -8
   remotenessOffset: 200
   approachOffset: 300
-  speed: .0500000007
+  speed: 1
 --- !u!1 &1420032880
 GameObject:
   m_ObjectHideFlags: 0
