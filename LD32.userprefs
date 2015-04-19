@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MovementController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AIController.cs">
     <Files>
-      <File FileName="Assets\Scripts\MovementController.cs" Line="26" Column="18" />
+      <File FileName="Assets\Scripts\AIController.cs" Line="79" Column="25" />
+      <File FileName="Assets\Scripts\MovementController.cs" Line="22" Column="96" />
+      <File FileName="Assets\Scripts\InputController.cs" Line="30" Column="46" />
+      <File FileName="Assets\Scripts\CombatController.cs" Line="41" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
