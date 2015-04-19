@@ -98,4 +98,9 @@ public class MovementController : MonoBehaviour {
         return facingRight;
     }
 
+    public void isFacingRight(bool isFacingRight)
+    {
+        facingRight = isFacingRight;
+    }
+
 }
