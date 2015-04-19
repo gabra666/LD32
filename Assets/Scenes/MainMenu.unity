@@ -1226,6 +1226,7 @@ MonoBehaviour:
   image: {fileID: 152059485}
   splash: {fileID: 2146563254}
   selectionCharacterPanel: {fileID: 128201616}
+  creditsPanel: {fileID: 357931104}
 --- !u!1 &1382954836
 GameObject:
   m_ObjectHideFlags: 0
