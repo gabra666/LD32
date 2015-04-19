@@ -1,9 +1,23 @@
 fileFormatVersion: 2
 guid: 380e223b6bb734d378f1d62addb017ea
-timeCreated: 1429436372
+timeCreated: 1429440773
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: baldosas-5_0
+    21300002: baldosas-5_1
+    21300004: baldosas-5_2
+    21300006: baldosas-5_3
+    21300008: baldosas-5_4
+    21300010: baldosas-5_5
+    21300012: baldosas-5_6
+    21300014: baldosas-5_7
+    21300016: baldosas-5_8
+    21300018: baldosas-5_9
+    21300020: baldosas-5_10
+    21300022: baldosas-5_11
+    21300024: baldosas-5_12
+    21300026: baldosas-5_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -48,7 +62,107 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: baldosas-5_0
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 1676
+        width: 521
+        height: 262
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_1
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1523
+        width: 521
+        height: 262
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_2
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 927
+        width: 254
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_3
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 931
+        width: 254
+        height: 254
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_4
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 918
+        width: 254
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_5
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 918
+        width: 254
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_6
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 585
+        width: 1627
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 400
+        width: 1628
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_11
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 258
+        width: 1628
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baldosas-5_13
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 75
+        width: 1628
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
