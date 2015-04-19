@@ -101,10 +101,10 @@ GameObject:
   - 114: {fileID: 977240025}
   - 114: {fileID: 977240024}
   - 114: {fileID: 977240023}
-  - 114: {fileID: 977240026}
   - 95: {fileID: 977240028}
+  - 114: {fileID: 977240026}
   m_Layer: 9
-  m_Name: Enemy
+  m_Name: AIEnemy
   m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,9 +224,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 977240018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74464fa852effae44820551b48f59b80, type: 3}
+  m_Script: {fileID: 11500000, guid: e8337d1635df88d4f965c5c27ad71931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeEnoughDistance: .5
 --- !u!95 &977240028
 Animator:
   serializedVersion: 3

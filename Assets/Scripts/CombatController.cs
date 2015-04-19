@@ -12,12 +12,19 @@ public class CombatController : MonoBehaviour {
     private bool blocking = false;
     private float timeTillAttackButtonPressed = 0;
 
+	public AudioSource chargin_snd;
+	public AudioSource attack_snd;
+	public AudioSource chargedAttack_snd;
+	public AudioSource grito_snd;
+	public AudioSource bloqueado_snd;
+
     private Animator animator;
     private MovementController movementController;
 	// Use this for initialization
 	void Start () {
 	    animator = gameObject.GetComponent<Animator>();
         movementController = gameObject.GetComponent<MovementController>();
+
 	}
 	
 	// Update is called once per frame
@@ -27,7 +34,7 @@ public class CombatController : MonoBehaviour {
             timeTillAttackButtonPressed += Time.deltaTime;
             if (!charging)
             {
-                if (timeTillAttackButtonPressed >= 0.25)
+                if (timeTillAttackButtonPressed >= 1.25)
                 {
                     animator.SetBool("charging", true);
                     charging = true;
@@ -43,10 +50,13 @@ public class CombatController : MonoBehaviour {
     {
         attacking = true;
         movementController.blockMovement(attacking);
+		chargin_snd.Play();
     }
 
     private void chargeFailed()
     {
+		chargin_snd.Stop();
+		grito_snd.Play ();
         charging = false;
         attacking = false;
         animator.SetTrigger("chargeFailed");
@@ -55,17 +65,21 @@ public class CombatController : MonoBehaviour {
 
     public void releaseAttack()
     {
+		chargin_snd.Stop();
+
         if (attacking)
         {
             if (!charging)
             {
                 animator.SetBool("punching", true);
                 makeDamegeIfEnemyHasBeenBeaten(0, 10);
+				attack_snd.Play();
             }
             else
             {
                 animator.SetBool("charging", false);
                 makeDamegeIfEnemyHasBeenBeaten(1, 25);
+				chargedAttack_snd.Play();
             }
 
             timeTillAttackButtonPressed = 0;
@@ -97,6 +111,7 @@ public class CombatController : MonoBehaviour {
     {
         attacking = false;
         movementController.blockMovement(attacking);
+		bloqueado_snd.Play ();
     }
 
     public bool isBlocking()
@@ -114,5 +129,6 @@ public class CombatController : MonoBehaviour {
     public void damaged()
     {
         animator.SetTrigger("damageReceived");
+		grito_snd.Play ();
     }
 }

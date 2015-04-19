@@ -16,9 +16,17 @@ public class FightFinishedController : MonoBehaviour {
 
     void FightFinished(GameObject loser)
     {
-        
         loser.GetComponent<Animator>().SetTrigger("lose");
-        GameObject.FindGameObjectWithTag((loser.tag == "Player") ? "Player2" : "Player").GetComponent<Animator>().SetTrigger("win");
-        
+        loser.GetComponent<InputController>().enabled = false;
+
+        GameObject winner = GameObject.FindGameObjectWithTag((loser.tag == "Player") ? "Player2" : "Player");
+        winner.GetComponent<Animator>().SetTrigger("win");
+        winner.GetComponent<InputController>().enabled = false;
+
+        showFightFinsishedMessage(winner.name);
+    }
+
+    private void showFightFinsishedMessage(string winnerName)
+    {
     }
 }
