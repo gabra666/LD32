@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: f8dfd2484cdbe4514968d9930c6810ef
+timeCreated: 1429457933
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Character-selection_0
+    21300002: Character-selection_1
+    21300004: Character-selection_2
+    21300006: Character-selection_3
+    21300008: Character-selection_4
+    21300010: Character-selection_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Character-selection_0
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 1407
+        width: 603
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character-selection_1
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 1418
+        width: 603
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character-selection_2
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 726
+        width: 603
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character-selection_3
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 742
+        width: 603
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character-selection_4
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 101
+        width: 603
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character-selection_5
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 104
+        width: 603
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
