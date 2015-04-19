@@ -4,7 +4,8 @@ using System.Collections;
 public class Globals : MonoBehaviour {
 
 
-	public static bool seenSplash=true;
+	public static bool seenSplash=false;
+	public static int numberOfPlayers=0;
 	// Use this for initialization
 	void Start () {
 	
