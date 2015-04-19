@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FollowPlayer : MonoBehaviour {
+public class FollowPlayers : MonoBehaviour {
     public float minDistance;
     public float maxDistance;
     public float remotenessOffset;
@@ -20,20 +20,31 @@ public class FollowPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        float xPosition = player2.transform.position.x + (player1.transform.position.x - player2.transform.position.x)/2;
-        Vector3 newPosition = new Vector3(xPosition, transform.position.y, transform.position.z);
+        //float xPosition = player2.transform.position.x + (player1.transform.position.x - player2.transform.position.x)/2;
+        Vector3 newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        if (checkPlayerIsOutsideScreen(Camera.main.WorldToScreenPoint(player1.transform.position), remotenessOffset) ||
-            checkPlayerIsOutsideScreen(Camera.main.WorldToScreenPoint(player2.transform.position), remotenessOffset))
+        if (checkPlayerIsOutsideScreen(Camera.main.WorldToScreenPoint(player1.transform.position)) ||
+            checkPlayerIsOutsideScreen(Camera.main.WorldToScreenPoint(player2.transform.position)))
         {
-            if (transform.position.z < maxDistance)
-                newPosition.z += Time.deltaTime * speed * 1;
+            if (transform.position.z > maxDistance)
+                newPosition.z -= speed * Time.deltaTime;
         }
+        else if (checkPlayerIsInsideScreen(Camera.main.WorldToScreenPoint(player1.transform.position)) ||
+            checkPlayerIsInsideScreen(Camera.main.WorldToScreenPoint(player2.transform.position)))
+            if (transform.position.z < minDistance)
+                newPosition.z += speed * Time.deltaTime;
+        transform.position = newPosition;
 	}
 
-    private bool checkPlayerIsOutsideScreen(Vector3 playerScreenPosition, float offset)
+    private bool checkPlayerIsOutsideScreen(Vector3 playerScreenPosition)
     {
-        return (Screen.width - playerScreenPosition.x < offset || playerScreenPosition.x < offset
-            || Screen.height - playerScreenPosition.y < offset);
+        return (Screen.width - playerScreenPosition.x < remotenessOffset || playerScreenPosition.x < remotenessOffset
+            || Screen.height - playerScreenPosition.y < remotenessOffset);
+    }
+
+    private bool checkPlayerIsInsideScreen(Vector3 playerScreenPosition)
+    {
+        return (Screen.width - playerScreenPosition.x > approachOffset && playerScreenPosition.x > approachOffset
+            && Screen.height - playerScreenPosition.y > approachOffset);
     }
 }
