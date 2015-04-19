@@ -1,32 +1,32 @@
 fileFormatVersion: 2
 guid: 2c4c9ecea4ff3476bbdfbdd61a62881a
-timeCreated: 1429462222
+timeCreated: 1429463707
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Character01Shoulder
-    21300002: Character01Head01
-    21300004: Character01Head02
-    21300006: Character01Head03
-    21300008: Character01UpperArm
-    21300010: Character01Chest
-    21300012: Character01ChestSide
-    21300014: Character01LowerArmOut
-    21300016: Character01LowerArmIn
-    21300018: Character01HandRight
-    21300020: Character01Hip
-    21300022: Character01HandLeft
-    21300024: Character01UpperLegRight
-    21300026: Character01CCensored
-    21300028: Character01UpperLegLeft
-    21300030: Character01HipSide
-    21300032: Character01KneeLeft
+    21300000: Character02Shoulder
+    21300002: Character02Head01
+    21300004: Character02Head02
+    21300006: Character02Head03
+    21300008: Character02UpperArm
+    21300010: Character02Chest
+    21300012: Character02ChestSide
+    21300014: Character02LowerArmOut
+    21300016: Character02LowerArmIn
+    21300018: Character02HandRight
+    21300020: Character02Hip
+    21300022: Character02HandLeft
+    21300024: Character02UpperLegRight
+    21300026: Character02CCensored
+    21300028: Character02UpperLegLeft
+    21300030: Character02HipSide
+    21300032: Character02KneeLeft
     21300034: Character01KneeRight
-    21300036: Character01LowerLegRight
-    21300038: Character01LowerLegLeft
-    21300040: Character01FootPress
-    21300042: Character01FootRight
-    21300044: Character01FootLeft
+    21300036: Character02LowerLegRight
+    21300038: Character02LowerLegLeft
+    21300040: Character02FootPress
+    21300042: Character02FootRight
+    21300044: Character02FootLeft
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -72,7 +72,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Character01Shoulder
+    - name: Character02Shoulder
       rect:
         serializedVersion: 2
         x: 115
@@ -82,7 +82,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01Head01
+    - name: Character02Head01
       rect:
         serializedVersion: 2
         x: 321
@@ -92,7 +92,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .509345651, y: .200763971}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01Head02
+    - name: Character02Head02
       rect:
         serializedVersion: 2
         x: 465
@@ -102,7 +102,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .527384579, y: .196001843}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01Head03
+    - name: Character02Head03
       rect:
         serializedVersion: 2
         x: 609
@@ -112,7 +112,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .336824238, y: .193472728}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01UpperArm
+    - name: Character02UpperArm
       rect:
         serializedVersion: 2
         x: 20
@@ -122,7 +122,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .729830921, y: .810181201}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01Chest
+    - name: Character02Chest
       rect:
         serializedVersion: 2
         x: 239
@@ -132,7 +132,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .595283031, y: .100251719}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01ChestSide
+    - name: Character02ChestSide
       rect:
         serializedVersion: 2
         x: 806
@@ -142,7 +142,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .522092879, y: .0999002829}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01LowerArmOut
+    - name: Character02LowerArmOut
       rect:
         serializedVersion: 2
         x: 76
@@ -152,7 +152,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .553132892, y: .899145126}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01LowerArmIn
+    - name: Character02LowerArmIn
       rect:
         serializedVersion: 2
         x: 624
@@ -162,7 +162,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .499998957, y: .868042469}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01HandRight
+    - name: Character02HandRight
       rect:
         serializedVersion: 2
         x: 151
@@ -172,7 +172,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .265019149, y: .797456086}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01Hip
+    - name: Character02Hip
       rect:
         serializedVersion: 2
         x: 329
@@ -182,7 +182,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01HandLeft
+    - name: Character02HandLeft
       rect:
         serializedVersion: 2
         x: 581
@@ -192,7 +192,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .76083374, y: .805514038}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01UpperLegRight
+    - name: Character02UpperLegRight
       rect:
         serializedVersion: 2
         x: 196
@@ -202,17 +202,17 @@ TextureImporter:
       alignment: 9
       pivot: {x: .518509686, y: .905136645}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01CCensored
+    - name: Character02CCensored
       rect:
         serializedVersion: 2
         x: 369
-        y: 314
+        y: 259
         width: 32
-        height: 65
+        height: 120
       alignment: 9
       pivot: {x: .499999046, y: .922836065}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01UpperLegLeft
+    - name: Character02UpperLegLeft
       rect:
         serializedVersion: 2
         x: 504
@@ -222,7 +222,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .585938931, y: .898022771}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01HipSide
+    - name: Character02HipSide
       rect:
         serializedVersion: 2
         x: 846
@@ -232,7 +232,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01KneeLeft
+    - name: Character02KneeLeft
       rect:
         serializedVersion: 2
         x: 208
@@ -252,7 +252,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01LowerLegRight
+    - name: Character02LowerLegRight
       rect:
         serializedVersion: 2
         x: 215
@@ -262,7 +262,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .355274379, y: .931990385}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01LowerLegLeft
+    - name: Character02LowerLegLeft
       rect:
         serializedVersion: 2
         x: 503
@@ -272,7 +272,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .665430725, y: .947565556}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01FootPress
+    - name: Character02FootPress
       rect:
         serializedVersion: 2
         x: 591
@@ -282,7 +282,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .243332252, y: .724031091}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01FootRight
+    - name: Character02FootRight
       rect:
         serializedVersion: 2
         x: 127
@@ -292,7 +292,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .855629563, y: .57397002}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Character01FootLeft
+    - name: Character02FootLeft
       rect:
         serializedVersion: 2
         x: 541
