@@ -1,9 +1,23 @@
 fileFormatVersion: 2
 guid: c5af429e83cec451184d71186cf53aa2
-timeCreated: 1429436377
+timeCreated: 1429437447
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: props4_0
+    21300002: props4_1
+    21300004: props4_2
+    21300006: props4_3
+    21300008: props4_4
+    21300010: props4_5
+    21300012: props4_6
+    21300014: props4_7
+    21300016: props4_8
+    21300018: props4_9
+    21300020: props4_10
+    21300022: props4_11
+    21300024: props4_12
+    21300026: props4_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,25 +44,165 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: props4_0
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 156
+        width: 303
+        height: 1809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_1
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 154
+        width: 303
+        height: 1811
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_2
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 1776
+        width: 239
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_3
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 1776
+        width: 238
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_4
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 1421
+        width: 667
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_5
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1067
+        width: 166
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_6
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1071
+        width: 166
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_7
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1071
+        width: 165
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_8
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 754
+        width: 76
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_9
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 754
+        width: 87
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_10
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 754
+        width: 93
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_11
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 510
+        width: 76
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_12
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 510
+        width: 88
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props4_13
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 508
+        width: 93
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

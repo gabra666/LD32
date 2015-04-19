@@ -1,9 +1,18 @@
 fileFormatVersion: 2
 guid: c6a770a657ace400388635c1834e568b
-timeCreated: 1429436378
+timeCreated: 1429439212
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Props2_0
+    21300002: Props2_1
+    21300004: Props2_2
+    21300006: Props2_3
+    21300008: Props2_4
+    21300010: Props2_5
+    21300012: Props2_6
+    21300014: Props2_7
+    21300016: Props2_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -48,7 +57,97 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Props2_0
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 702
+        width: 315
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Props2_1
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1008
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Props2_2
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 1019
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Props2_3
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 1025
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Props2_4
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 759
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Props2_5
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 154
+        width: 320
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Props2_6
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 177
+        width: 134
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Props2_7
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 36
+        width: 475
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Props2_8
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 60
+        width: 75
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
