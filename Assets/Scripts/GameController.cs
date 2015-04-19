@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class GameController : MonoBehaviour {
+    public GameObject fightFinishedGUI;
+    
     GameObject player1;
     GameObject player2;
 
@@ -36,10 +38,6 @@ public class GameController : MonoBehaviour {
         winner.GetComponent<Animator>().SetTrigger("win");
         winner.GetComponent<InputController>().enabled = false;
 
-        showFightFinsishedMessage(winner.name);
-    }
-
-    private void showFightFinsishedMessage(string winnerName)
-    {
+        fightFinishedGUI.SendMessage("FightFinished", winner.name);
     }
 }
