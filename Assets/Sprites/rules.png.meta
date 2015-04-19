@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 8599bc0adbce54a77add936b2ed2a4ab
+timeCreated: 1429472157
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: rules_0
+    21300002: rules_1
+    21300004: rules_2
+    21300006: rules_3
+    21300008: rules_4
+    21300010: rules_5
+    21300012: rules_6
+    21300014: rules_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: rules_0
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1622
+        width: 826
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rules_1
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1420
+        width: 826
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rules_2
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1228
+        width: 1051
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rules_3
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1044
+        width: 826
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rules_4
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 865
+        width: 826
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rules_5
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 700
+        width: 827
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rules_6
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 537
+        width: 826
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rules_7
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 300
+        width: 1051
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
