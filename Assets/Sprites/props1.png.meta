@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 5886fe1d5568c4e2a8b6e25f640e275f
+timeCreated: 1429436539
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: props1_0
+    21300002: props1_1
+    21300004: props1_2
+    21300006: props1_3
+    21300008: props1_4
+    21300010: props1_5
+    21300012: props1_6
+    21300014: props1_7
+    21300016: props1_8
+    21300018: props1_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 200
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: props1_0
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1013
+        width: 260
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props1_1
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1013
+        width: 217
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props1_2
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1013
+        width: 433
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props1_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 482
+        width: 335
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props1_4
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 482
+        width: 336
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props1_5
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 443
+        width: 523
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props1_6
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 438
+        width: 522
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props1_7
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 93
+        width: 666
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props1_8
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 304
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: props1_9
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 63
+        width: 280
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
