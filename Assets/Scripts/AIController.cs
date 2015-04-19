@@ -72,7 +72,6 @@ public class AIController : MonoBehaviour {
 
 
 	private void BeAgressive(){
-		Debug.Log("Agressive");
 		//MoveToPlayer And Attack when in range every X seconds 
 		if(DistanceToPlayer() > closeEnoughDistance){
 			MoveTowardsPlayer();
