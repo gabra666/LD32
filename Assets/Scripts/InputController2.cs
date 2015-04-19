@@ -27,5 +27,8 @@ public class InputController2 : MonoBehaviour {
             combatController.block(true);
         if (Input.GetKeyUp(KeyCode.Return))
             combatController.block(false);
+
+        if (Input.GetKeyDown(KeyCode.Delete))
+            Application.LoadLevel("MainMenu");
     }
 }

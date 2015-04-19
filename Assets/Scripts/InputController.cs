@@ -33,5 +33,8 @@ public class InputController : MonoBehaviour {
             combatController.block(true);
         if (Input.GetKeyUp(KeyCode.G))
             combatController.block(false);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.LoadLevel("MainMenu");
 	}
 }
