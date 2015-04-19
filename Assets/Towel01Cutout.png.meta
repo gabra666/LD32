@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 2aecc18f5d4a87b41a6127508299d0fa
+timeCreated: 1429395283
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Towel01Cutout_0
+    21300002: Towel01Cutout_1
+    21300004: Towel01Cutout_2
+    21300006: Towel01Cutout_3
+    21300008: Towel01Cutout_4
+    21300010: Towel01Cutout_5
+    21300012: Towel01Cutout_6
+    21300014: Towel01Cutout_7
+    21300016: Towel01Cutout_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Towel01Cutout_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 236
+        width: 92
+        height: 181
+      alignment: 9
+      pivot: {x: .93215096, y: .96616292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Towel01Cutout_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 369
+        width: 20
+        height: 71
+      alignment: 9
+      pivot: {x: .782967389, y: .898545802}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Towel01Cutout_2
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 249
+        width: 50
+        height: 194
+      alignment: 9
+      pivot: {x: .35198608, y: .97348243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Towel01Cutout_3
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 410
+        width: 68
+        height: 24
+      alignment: 9
+      pivot: {x: .937799335, y: .333255768}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Towel01Cutout_4
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 275
+        width: 34
+        height: 65
+      alignment: 9
+      pivot: {x: .763411582, y: .92395252}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Towel01Cutout_5
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 184
+        width: 64
+        height: 215
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Towel01Cutout_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 151
+        width: 295
+        height: 68
+      alignment: 9
+      pivot: {x: .0157477167, y: .0940170288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Towel01Cutout_7
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 75
+        width: 35
+        height: 61
+      alignment: 9
+      pivot: {x: .82552284, y: .938203931}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Towel01Cutout_8
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 90
+        width: 54
+        height: 50
+      alignment: 9
+      pivot: {x: .0777740479, y: .905247808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
