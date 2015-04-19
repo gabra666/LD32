@@ -6,17 +6,19 @@ using UnityEngine.UI;
 public class VisualLifeController : MonoBehaviour
 {
     public Life playerLife;
+    public RectTransform lifeTransform;
+    public Image visualLife;
+    public float maxTimeLifebarAnimation = 1;
 
     private float currentLife;
-    private float visualCurrentLife;
+    private int maxLife;
 
-    public RectTransform lifeTransform;
+    private float visualCurrentLife;
     private float visualLifeMaxWidth;
     private float visualLifeStartPosition;
-    private int maxLife;
-    public Image visualLife;
+    
     private bool isPlayer2;
-    public float maxTimeLifebarAnimation = 1;
+    
 
     // Use this for initialization
     void Start()
@@ -43,7 +45,7 @@ public class VisualLifeController : MonoBehaviour
         
         lifeTransform.sizeDelta = new Vector2((visualLifeMaxWidth / maxLife) * visualCurrentLife, lifeTransform.sizeDelta.y);
         float xDisplacement = (isPlayer2 ? 1 : -1) * ((visualLifeMaxWidth - lifeTransform.sizeDelta.x) / 2);
-        Vector2 newLocalPos = lifeTransform.localPosition = new Vector2(visualLifeStartPosition + xDisplacement, lifeTransform.localPosition.y);
+        lifeTransform.localPosition = new Vector2(visualLifeStartPosition + xDisplacement, lifeTransform.localPosition.y);
         visualLife.color = new Color(1 - ((float)visualCurrentLife / (float)maxLife), ((float)visualCurrentLife / (float)maxLife), 0f);
     }
 
