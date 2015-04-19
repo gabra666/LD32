@@ -14,18 +14,15 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //StorageManager.Instance.Player1CharacterName
+        //
         player1 = GameObject.FindGameObjectWithTag("Player");
         player2 = GameObject.FindGameObjectWithTag("Player2");
 
-        player1.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Rober") as RuntimeAnimatorController;
-        player2.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Rober") as RuntimeAnimatorController;
+        player1.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(StorageManager.Instance.Player1CharacterName) as RuntimeAnimatorController;
+        player2.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(StorageManager.Instance.Player2CharacterName) as RuntimeAnimatorController;
 
-        player1.name = StorageManager.Instance.Player1CharacterName;
-        player2.name = StorageManager.Instance.Player2CharacterName;
-
-        player1Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player2CharacterName == "Character1") ? character1Portrait : character2Portrait);
-        player2Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player2CharacterName == "Character1") ? character1Portrait : character2Portrait);
+        player1Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player1CharacterName == "Rober") ? character1Portrait : character2Portrait);
+        player2Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player2CharacterName == "Rober") ? character1Portrait : character2Portrait);
 
         if (StorageManager.Instance.NumberOfPlayers == 2)
             player2.AddComponent<InputController>();
