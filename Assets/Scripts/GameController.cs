@@ -27,9 +27,12 @@ public class GameController : MonoBehaviour {
     void FightFinished(GameObject loser)
     {
         loser.GetComponent<Animator>().SetTrigger("lose");
-        loser.GetComponent<InputController>().enabled = false;
+        if (loser == player2 && StorageManager.Instance.NumberOfPlayers == 2)
+            loser.GetComponent<InputController>().enabled = false;
+        else if (loser == player2)
+            loser.GetComponent<AIController>().enabled = false;
 
-        GameObject winner = GameObject.FindGameObjectWithTag((loser.tag == "Player") ? "Player2" : "Player");
+        GameObject winner = GameObject.FindGameObjectWithTag((loser == player1) ? "Player2" : "Player");
         winner.GetComponent<Animator>().SetTrigger("win");
         winner.GetComponent<InputController>().enabled = false;
 
