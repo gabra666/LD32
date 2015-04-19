@@ -5,6 +5,7 @@ using Assets.Scripts;
 public class CombatController : MonoBehaviour {
     public int maximunTimeCharging;
     public int chargedAttackMultiplier;
+    public float attackRange;
 
     private bool charging = false;
     private bool attacking = false;
@@ -91,14 +92,11 @@ public class CombatController : MonoBehaviour {
     {
         int rayDirection = movementController.isFacingRight() ? 1 : -1;
         Vector3 rayOrigin = gameObject.transform.position;
-        rayOrigin.x += (rayDirection * gameObject.GetComponent<Collider2D>().transform.localScale.x / 2);
-        RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(rayOrigin, new Vector2(rayDirection, 0), 0.3f);
-        if (objectBeaten.Length > 0)
-            foreach (RaycastHit2D raycast in objectBeaten)
-            {
+
+        RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(rayOrigin, new Vector2(rayDirection, 0));
+        foreach (RaycastHit2D raycast in objectBeaten)
+            if (raycast.collider.gameObject != gameObject && Mathf.Abs(gameObject.transform.position.x -raycast.collider.gameObject.transform.position.x) <= attackRange)
                 raycast.collider.gameObject.SendMessage("ReceiveDamage", new Attack(attackType, damage), SendMessageOptions.DontRequireReceiver);
-                Debug.Log(raycast.collider.gameObject.name);
-            }
     }
 
     public void block(bool block)

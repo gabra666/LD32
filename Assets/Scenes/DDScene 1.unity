@@ -339,7 +339,7 @@ Transform:
   m_GameObject: {fileID: 1389668713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -5.69999981, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -525,8 +525,8 @@ MonoBehaviour:
   CamObjX: 0
   CamObjY: 0
   CamOffset: 3
-  vuelveX: 0
-  vuelveY: 0
+  vuelveX: 1
+  vuelveY: 1
 --- !u!1 &1718617659
 GameObject:
   m_ObjectHideFlags: 0
