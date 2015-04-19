@@ -29,9 +29,9 @@ public class InputController : MonoBehaviour {
         else if (Input.GetKey(KeyCode.D))
             movement.x = 1;
 
-        if (Input.GetKeyDown(KeyCode.W))
-            movement.y = 1;
-
+//        if (Input.GetKeyDown(KeyCode.W))
+//            movement.y = 1;
+		Debug.Log("X = "+movement.x);
         movementController.setMovementVector(movement);
 
         if (Input.GetKeyDown(KeyCode.F))
