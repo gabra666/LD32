@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class VisualLifeController : MonoBehaviour
 {
-    public Life playerLife;
+    public string tag;
+    private Life playerLife;
     public RectTransform lifeTransform;
     public Image visualLife;
     public float maxTimeLifebarAnimation = 1;
@@ -23,6 +24,7 @@ public class VisualLifeController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        playerLife = GameObject.FindGameObjectWithTag(tag).GetComponent<Life>();
         maxLife = (int) playerLife.maximunLife;
         currentLife = maxLife;
         visualCurrentLife = currentLife;

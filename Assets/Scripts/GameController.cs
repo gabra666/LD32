@@ -8,45 +8,36 @@ public class GameController : MonoBehaviour {
     public GameObject player2Portrait;
     public Sprite character1Portrait;
     public Sprite character2Portrait;
-    public Sprite blackChest;
-    public Sprite blackBack;
+    public Transform player1Spawn;
+    public Transform player2Spawn;
+    public GameObject Bobby;
+    public GameObject Rober;
 
     private  GameObject player1;
     private  GameObject player2;
 
+    void Awake()
+    {
+        player1 = GameObject.Instantiate((StorageManager.Instance.Player1CharacterName == "Rober") ? Rober : Bobby, player1Spawn.position, player1Spawn.rotation) as GameObject;
+        player2 = GameObject.Instantiate((StorageManager.Instance.Player2CharacterName == "Rober") ? Rober : Bobby, player2Spawn.position, player2Spawn.rotation) as GameObject;
+
+        player1.transform.position = player1Spawn.position;
+        player2.transform.position = player2Spawn.position;
+
+        player1.tag = "Player";
+        player2.tag = "Player2";
+
+        player1.SetActive(true);
+        player2.SetActive(true);
+    }
+
 	// Use this for initialization
 	void Start () {
-        //
-        player1 = GameObject.FindGameObjectWithTag("Player");
-        player2 = GameObject.FindGameObjectWithTag("Player2");
-
-        player1.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(StorageManager.Instance.Player1CharacterName) as RuntimeAnimatorController;
-        player2.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(StorageManager.Instance.Player2CharacterName) as RuntimeAnimatorController;
-
-        if (StorageManager.Instance.Player1CharacterName != "Rober")
-        {
-            GameObject.Find("WhiteHip1").SetActive(false);
-            GameObject.Find("WhiteChest1").SetActive(false);
-        }
-        else
-        {
-            GameObject.Find("BlackHip1").SetActive(false);
-            GameObject.Find("BlackChest1").SetActive(false);
-        }
-
-        if (StorageManager.Instance.Player2CharacterName != "Rober")
-        {
-            GameObject.Find("WhiteHip2").SetActive(false);
-            GameObject.Find("WhiteChest2").SetActive(false);
-        }
-        else
-        {
-            GameObject.Find("BlackHip2").SetActive(false);
-            GameObject.Find("BlackChest2").SetActive(false);
-        }
-
+        
         player1Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player1CharacterName == "Rober") ? character1Portrait : character2Portrait);
         player2Portrait.SendMessage("SetPortrait", (StorageManager.Instance.Player2CharacterName == "Rober") ? character1Portrait : character2Portrait);
+
+        player1.AddComponent<InputController>();
 
         if (StorageManager.Instance.NumberOfPlayers == 2)
             player2.AddComponent<InputController>();
