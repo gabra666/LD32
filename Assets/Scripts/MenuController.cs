@@ -20,9 +20,10 @@ public class MenuController : MonoBehaviour {
 	
 	}
 
-	public void LoadScene(int sceneNumber)
+	public void LoadScene(int numberOfPlayers)
 	{
-		StartCoroutine ("CrossFade", sceneNumber);
+        StorageManager.Instance.NumberOfPlayers = numberOfPlayers;
+		StartCoroutine ("CrossFade", 1);
 	}
 
 	public void LoadCreditsPanel()

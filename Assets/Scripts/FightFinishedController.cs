@@ -5,7 +5,8 @@ public class FightFinishedController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        if (StorageManager.Instance.NumberOfPlayers == 2)
+            GameObject.FindGameObjectWithTag("Player2").AddComponent<InputController>();
 	}
 	
 	// Update is called once per frame
