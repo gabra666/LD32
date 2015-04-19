@@ -12,6 +12,9 @@ public class MenuController : MonoBehaviour {
 	void Start () {
 
 		image.CrossFadeAlpha (0f, 0f,true);
+		if (Globals.seenSplash == true) {
+			splash.SetActive(false);
+		}
 	
 	}
 	
@@ -20,9 +23,10 @@ public class MenuController : MonoBehaviour {
 	
 	}
 
-	public void LoadScene(int sceneNumber)
+	public void LoadScene(int numberOfPlayers)
 	{
-		StartCoroutine ("CrossFade", sceneNumber);
+        StorageManager.Instance.NumberOfPlayers = numberOfPlayers;
+		StartCoroutine ("CrossFade", 1);
 	}
 
 	public void LoadCreditsPanel()
@@ -45,7 +49,7 @@ public class MenuController : MonoBehaviour {
 	public void QuitSplash()
 	{
 		Debug.Log ("Quit SPlash");
-		Globals.seenSplash = false;
+		Globals.seenSplash = true;
 		splash.GetComponent<Image> ().CrossFadeAlpha (0.0f, 1f, true);
 		splash.GetComponent<CanvasGroup> ().interactable = false;
 		splash.GetComponent<CanvasGroup> ().blocksRaycasts = false;
