@@ -17,6 +17,8 @@ public class CombatController : MonoBehaviour {
 	public AudioSource chargedAttack_snd;
 	public AudioSource grito_snd;
 	public AudioSource bloqueado_snd;
+    private Attack currentAttack;
+    private AudioSource currentAttackTSound;
 
     private Animator animator;
     private MovementController movementController;
@@ -72,14 +74,14 @@ public class CombatController : MonoBehaviour {
             if (!charging)
             {
                 animator.SetBool("punching", true);
-                makeDamegeIfEnemyHasBeenBeaten(0, 10);
-				attack_snd.Play();
+                currentAttack = new Attack(0, 10);
+                currentAttackTSound = attack_snd;
             }
             else
             {
                 animator.SetBool("charging", false);
-                makeDamegeIfEnemyHasBeenBeaten(1, 25);
-				chargedAttack_snd.Play();
+                currentAttack = new Attack(1, 25);
+				currentAttackTSound = chargedAttack_snd;
             }
 
             timeTillAttackButtonPressed = 0;
@@ -89,10 +91,12 @@ public class CombatController : MonoBehaviour {
         }
     }
 
-    private void makeDamegeIfEnemyHasBeenBeaten(int attackType, int damage)
+    public void makeDamegeIfEnemyHasBeenBeaten()
     {
         int rayDirection = movementController.isFacingRight() ? 1 : -1;
         Vector3 rayOrigin = gameObject.transform.position;
+
+        currentAttackTSound.Play();
 
         RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(rayOrigin, new Vector2(rayDirection, 0));
         foreach (RaycastHit2D raycast in objectBeaten)
@@ -100,7 +104,7 @@ public class CombatController : MonoBehaviour {
             Debug.Log(raycast.collider.gameObject.name);
             if (raycast.collider.gameObject != gameObject && Mathf.Abs(gameObject.transform.position.x - raycast.collider.gameObject.transform.position.x) <= attackRange)
             {
-                raycast.collider.gameObject.SendMessage("ReceiveDamage", new Attack(attackType, damage), SendMessageOptions.DontRequireReceiver);
+                raycast.collider.gameObject.SendMessage("ReceiveDamage", currentAttack, SendMessageOptions.DontRequireReceiver);
                 GameObject.Find("PunchMessagesController").SendMessage("Show", gameObject);
             }
         }
@@ -117,7 +121,7 @@ public class CombatController : MonoBehaviour {
     {
         attacking = false;
         movementController.blockMovement(attacking);
-		bloqueado_snd.Play ();
+        makeDamegeIfEnemyHasBeenBeaten();
     }
 
     public bool isBlocking()

@@ -37,4 +37,5 @@ public class PunchMessagesController : MonoBehaviour {
         yield return new WaitForSeconds(1.5f);
         message.SetActive(false);
     }
+
 }
