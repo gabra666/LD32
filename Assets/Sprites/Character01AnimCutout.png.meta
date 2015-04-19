@@ -1,0 +1,308 @@
+fileFormatVersion: 2
+guid: c9e51ee73121c414f94a2b7ebe09c0bb
+timeCreated: 1429439461
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Character01Shoulder
+    21300002: Character01Head01
+    21300004: Character01Head02
+    21300006: Character01Head03
+    21300008: Character01UpperArm
+    21300010: Character01Chest
+    21300012: Character01ChestSide
+    21300014: Character01LowerArmOut
+    21300016: Character01LowerArmIn
+    21300018: Character01HandRight
+    21300020: Character01Hip
+    21300022: Character01HandLeft
+    21300024: Character01UpperLegRight
+    21300026: Character01CCensored
+    21300028: Character01UpperLegLeft
+    21300030: Character01HipSide
+    21300032: Character01KneeLeft
+    21300034: Character01KneeRight
+    21300036: Character01LowerLegRight
+    21300038: Character01LowerLegLeft
+    21300040: Character01FootPress
+    21300042: Character01FootRight
+    21300044: Character01FootLeft
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Character01Shoulder
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 810
+        width: 92
+        height: 92
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01Head01
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 891
+        width: 84
+        height: 101
+      alignment: 9
+      pivot: {x: .509345651, y: .200763971}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01Head02
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 890
+        width: 86
+        height: 102
+      alignment: 9
+      pivot: {x: .527384579, y: .196001843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01Head03
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 889
+        width: 89
+        height: 105
+      alignment: 9
+      pivot: {x: .336824238, y: .193472728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01UpperArm
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 696
+        width: 86
+        height: 111
+      alignment: 9
+      pivot: {x: .729830921, y: .810181201}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01Chest
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 571
+        width: 218
+        height: 248
+      alignment: 9
+      pivot: {x: .595283031, y: .100251719}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01ChestSide
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 460
+        width: 198
+        height: 246
+      alignment: 9
+      pivot: {x: .522092879, y: .0999002829}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01LowerArmOut
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 547
+        width: 60
+        height: 123
+      alignment: 9
+      pivot: {x: .553132892, y: .899145126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01LowerArmIn
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 547
+        width: 59
+        height: 123
+      alignment: 9
+      pivot: {x: .499998957, y: .868042469}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01HandRight
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 476
+        width: 44
+        height: 48
+      alignment: 9
+      pivot: {x: .265019149, y: .797456086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01Hip
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 430
+        width: 111
+        height: 94
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01HandLeft
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 488
+        width: 44
+        height: 48
+      alignment: 9
+      pivot: {x: .76083374, y: .805514038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01UpperLegRight
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 256
+        width: 39
+        height: 147
+      alignment: 9
+      pivot: {x: .518509686, y: .905136645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01CCensored
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 314
+        width: 32
+        height: 65
+      alignment: 9
+      pivot: {x: .499999046, y: .922836065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01UpperLegLeft
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 246
+        width: 42
+        height: 146
+      alignment: 9
+      pivot: {x: .585938931, y: .898022771}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01HipSide
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 315
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01KneeLeft
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 200
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01KneeRight
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 211
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01LowerLegRight
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 49
+        width: 23
+        height: 125
+      alignment: 9
+      pivot: {x: .355274379, y: .931990385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01LowerLegLeft
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 66
+        width: 24
+        height: 125
+      alignment: 9
+      pivot: {x: .665430725, y: .947565556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01FootPress
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 111
+        width: 45
+        height: 29
+      alignment: 9
+      pivot: {x: .243332252, y: .724031091}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01FootRight
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 33
+        width: 52
+        height: 20
+      alignment: 9
+      pivot: {x: .855629563, y: .57397002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Character01FootLeft
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 36
+        width: 51
+        height: 21
+      alignment: 9
+      pivot: {x: .20275639, y: .620313168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
