@@ -96,8 +96,11 @@ public class CombatController : MonoBehaviour {
 
         RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(rayOrigin, new Vector2(rayDirection, 0));
         foreach (RaycastHit2D raycast in objectBeaten)
-            if (raycast.collider.gameObject != gameObject && Mathf.Abs(gameObject.transform.position.x -raycast.collider.gameObject.transform.position.x) <= attackRange)
+            if (raycast.collider.gameObject != gameObject && Mathf.Abs(gameObject.transform.position.x - raycast.collider.gameObject.transform.position.x) <= attackRange)
+            {
                 raycast.collider.gameObject.SendMessage("ReceiveDamage", new Attack(attackType, damage), SendMessageOptions.DontRequireReceiver);
+                GameObject.Find("PunchMessagesController").SendMessage("Show", gameObject);
+            }
     }
 
     public void block(bool block)
