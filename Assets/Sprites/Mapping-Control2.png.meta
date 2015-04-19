@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: 1c3823f2acd7a4e69a7f48576fc2ca42
+timeCreated: 1429469217
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Mapping-Control2_0
+    21300002: Mapping-Control2_1
+    21300004: Mapping-Control2_2
+    21300006: Mapping-Control2_3
+    21300008: Mapping-Control2_4
+    21300010: Mapping-Control2_5
+    21300012: Mapping-Control2_6
+    21300014: Mapping-Control2_7
+    21300016: Mapping-Control2_8
+    21300018: Mapping-Control2_9
+    21300020: Mapping-Control2_10
+    21300022: Mapping-Control2_11
+    21300024: Mapping-Control2_12
+    21300026: Mapping-Control2_13
+    21300028: Mapping-Control2_14
+    21300030: Mapping-Control2_15
+    21300032: Mapping-Control2_16
+    21300034: Mapping-Control2_17
+    21300036: Mapping-Control2_18
+    21300038: Mapping-Control2_19
+    21300040: Mapping-Control2_20
+    21300042: Mapping-Control2_21
+    21300044: Mapping-Control2_22
+    21300046: Mapping-Control2_23
+    21300048: Mapping-Control2_24
+    21300050: Mapping-Control2_25
+    21300052: Mapping-Control2_26
+    21300054: Mapping-Control2_27
+    21300056: Mapping-Control2_28
+    21300058: Mapping-Control2_29
+    21300060: Mapping-Control2_30
+    21300062: Mapping-Control2_31
+    21300064: Mapping-Control2_32
+    21300066: Mapping-Control2_33
+    21300068: Mapping-Control2_34
+    21300070: Mapping-Control2_35
+    21300072: Mapping-Control2_36
+    21300074: Mapping-Control2_37
+    21300076: Mapping-Control2_38
+    21300078: Mapping-Control2_39
+    21300080: Mapping-Control2_40
+    21300082: Mapping-Control2_41
+    21300084: Mapping-Control2_42
+    21300086: Mapping-Control2_43
+    21300088: Mapping-Control2_44
+    21300090: Mapping-Control2_45
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Mapping-Control2_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1851
+        width: 139
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_1
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1840
+        width: 353
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_2
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1851
+        width: 139
+        height: 141
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_3
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1854
+        width: 138
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_4
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 1844
+        width: 353
+        height: 159
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_5
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1854
+        width: 142
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_6
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1671
+        width: 139
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_7
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1661
+        width: 329
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_8
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1674
+        width: 138
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_9
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1671
+        width: 67
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_10
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1663
+        width: 261
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_11
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1507
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_12
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1504
+        width: 374
+        height: 148
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_13
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1509
+        width: 138
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_14
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1508
+        width: 302
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_15
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1325
+        width: 140
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_16
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1328
+        width: 83
+        height: 141
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1325
+        width: 104
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_18
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1328
+        width: 138
+        height: 148
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_19
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1331
+        width: 86
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_20
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 1329
+        width: 104
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_21
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1071
+        width: 138
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_22
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1066
+        width: 355
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_23
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1071
+        width: 139
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_24
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1075
+        width: 138
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_25
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1070
+        width: 354
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_26
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 1074
+        width: 138
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_27
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 896
+        width: 138
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_28
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 889
+        width: 66
+        height: 145
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_29
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 882
+        width: 255
+        height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_30
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 899
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_31
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 892
+        width: 66
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_32
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 885
+        width: 255
+        height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_33
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 677
+        width: 441
+        height: 183
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_34
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 695
+        width: 375
+        height: 148
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_35
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 679
+        width: 441
+        height: 185
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_36
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 699
+        width: 301
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_37
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 461
+        width: 721
+        height: 185
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_38
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 482
+        width: 84
+        height: 141
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_39
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 479
+        width: 107
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_40
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 464
+        width: 722
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_41
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 483
+        width: 84
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_42
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 483
+        width: 106
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_43
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 61
+        width: 299
+        height: 274
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_44
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 63
+        width: 298
+        height: 275
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mapping-Control2_45
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 478
+        width: 207
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
