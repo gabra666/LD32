@@ -44,7 +44,7 @@ public class MovementController : MonoBehaviour {
          */
         animator.SetFloat("VerticalMovement", actualMovement.y);
         animator.SetFloat("HorizontalMovement", Mathf.Abs(actualMovement.x));
-        actualMovement = new Vector3(0, 0, 0);
+        actualMovement = new Vector3(actualMovement.x, 0, 0);
     }
 
     private void setYVelocity()
