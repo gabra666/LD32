@@ -82,10 +82,7 @@ public class CombatController : MonoBehaviour {
         RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(rayOrigin, new Vector2(rayDirection, 0), 0.3f);
         if (objectBeaten.Length > 0)
             foreach (RaycastHit2D raycast in objectBeaten)
-            {
                 raycast.collider.gameObject.SendMessage("ReceiveDamage", new Attack(attackType, damage), SendMessageOptions.DontRequireReceiver);
-                Debug.Log(raycast.collider.gameObject.name);
-            }
     }
 
     public void block(bool block)
