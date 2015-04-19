@@ -2836,6 +2836,14 @@ AnimationClip:
     path: Character01Chest/Character01ShoulderRight/Character01UpperArm/Character01LowerArmOut/Character01HandRight/Towel01Cutout_2
     classID: 212
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300018, guid: 2c4c9ecea4ff3476bbdfbdd61a62881a, type: 3}
+    attribute: m_Sprite
+    path: Character01Chest/Character01ShoulderLeft/Character01UpperArm 1/Character01LowerArmOut
+      1/Character01HandLeft
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -2916,6 +2924,12 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     - path: 456426480
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - path: 2299327636
       attribute: 0
       script: {fileID: 0}
       classID: 212
@@ -3098,6 +3112,7 @@ AnimationClip:
     - {fileID: 21300030, guid: 2c4c9ecea4ff3476bbdfbdd61a62881a, type: 3}
     - {fileID: 21300010, guid: 2aecc18f5d4a87b41a6127508299d0fa, type: 3}
     - {fileID: 21300010, guid: 2aecc18f5d4a87b41a6127508299d0fa, type: 3}
+    - {fileID: 21300018, guid: 2c4c9ecea4ff3476bbdfbdd61a62881a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
