@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: a282cd48714ff4b52b78c8e18cf57664
+timeCreated: 1429448282
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Menu-players_0
+    21300002: Menu-players_1
+    21300004: Menu-players_2
+    21300006: Menu-players_3
+    21300008: Menu-players_4
+    21300010: Menu-players_5
+    21300012: Menu-players_6
+    21300014: Menu-players_7
+    21300016: Menu-players_8
+    21300018: Menu-players_9
+    21300020: Menu-players_10
+    21300022: Menu-players_11
+    21300024: Menu-players_12
+    21300026: Menu-players_13
+    21300028: Menu-players_14
+    21300030: Menu-players_15
+    21300032: Menu-players_16
+    21300034: Menu-players_17
+    21300036: Menu-players_18
+    21300038: Menu-players_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Menu-players_0
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1617
+        width: 474
+        height: 475
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_1
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1615
+        width: 476
+        height: 474
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_2
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1607
+        width: 474
+        height: 474
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_3
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1050
+        width: 476
+        height: 475
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_4
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 1046
+        width: 474
+        height: 475
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_5
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1065
+        width: 474
+        height: 473
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_6
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 749
+        width: 24
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_7
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 748
+        width: 97
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_8
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 640
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_9
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 638
+        width: 124
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_10
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 170
+        width: 127
+        height: 127
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_11
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 263
+        width: 440
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_12
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 205
+        width: 131
+        height: 102
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_13
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 193
+        width: 127
+        height: 102
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_14
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 283
+        width: 440
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_15
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 170
+        width: 127
+        height: 127
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_16
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 83
+        width: 446
+        height: 134
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_17
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 103
+        width: 446
+        height: 132
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_18
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 743
+        width: 247
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu-players_19
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 629
+        width: 282
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

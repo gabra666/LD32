@@ -9,10 +9,14 @@ public class AIController : MonoBehaviour {
 	private GameObject player;
 	private Vector2 movement;
 
+	private float randomCareBehave;
+	private bool selectRandomCareBehave = true;
+
 	public float closeEnoughDistance = 0.5f;
-	public float timeBetweenAttacks = 5f;
-	public float blockProbability = 0.75f;
-	public float chargeAttackProbability = 0.25f;
+	public float maxDistance = 1.5f;
+	public float timeBetweenAttacks = 2f;
+	public float blockProbability = 0.25f;
+	public float chargeAttackProbability = 0.4f;
 
 
 	private float timeBetweenAttacksLeft = 0;
@@ -46,14 +50,19 @@ public class AIController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector2 movement = new Vector2(0,0);
-		if(life.actualLife > life.maximunLife*0.75){
+		if(life.actualLife >= life.maximunLife*0.75){
 			//BeAgressive;
 			BeAgressive();
 		}
-		else if(life.actualLife < life.maximunLife*0.75 && life.actualLife > life.maximunLife*0.5){
+		else if(life.actualLife < life.maximunLife*0.75 && life.actualLife >= life.maximunLife*0.4){
 			//BeCare;
+			blockProbability = 0.5f;
+			chargeAttackProbability = 0.45f;
+			BeCare();
 		}
 		else{
+			blockProbability = 0.75f;
+			chargeAttackProbability = 0.15f;
 			//BePassive;
 			BePassive();
 		}
@@ -67,17 +76,42 @@ public class AIController : MonoBehaviour {
 		if(DistanceToPlayer() > closeEnoughDistance){
 			MoveTowardsPlayer();
 		}else{
-			Attack();
-			TryToBlock();
+			if(Random.Range(0f,1f)<0.5){
+				Attack();
+			}else{
+				TryToBlock();
+			}
 		}
 
 	}
 
 	private void BeCare(){
+		Debug.Log("Care");
 		//Defend for a while but attack when possible 
+		if(selectRandomCareBehave){
+			Debug.Log("Selecting behave");
+			randomCareBehave = Random.Range(0f,1f);
+			selectRandomCareBehave = false;
+		}
+		Debug.Log(randomCareBehave);
+		if(randomCareBehave < 0.8){
+			if(DistanceToPlayer() > closeEnoughDistance){
+				MoveTowardsPlayer();
+			}else{
+				Attack();
+			}
+		}else{
+			if(DistanceToPlayer() < maxDistance){
+				MoveAwayFromPlayer();
+			}else{
+				TryToBlock();
+			}
+		}
+
 	}
 
 	private void BePassive(){
+		Debug.Log("Passive");
 		MoveAwayFromPlayer();
 		//Move Away from player jump forward when reaching a collider 
 	}
@@ -113,7 +147,7 @@ public class AIController : MonoBehaviour {
 
 			float randomValue = Random.Range(0.0f,1.0f);
 
-			if(randomValue > chargeAttackProbability){
+			if(randomValue < chargeAttackProbability){
 				charging = true;
 				StartCoroutine(DoChargeAttack());
 			}else{
@@ -127,14 +161,18 @@ public class AIController : MonoBehaviour {
 		combatController.chargeAttack();
 		combatController.releaseAttack();
 		timeBetweenAttacksLeft = timeBetweenAttacks;
+
+		selectRandomCareBehave = true;
 	}
 
 	private IEnumerator DoChargeAttack(){
+		Debug.Log("Chargiiiiing");
 		combatController.chargeAttack();
-		yield return new WaitForSeconds(0.3f);
+		yield return new WaitForSeconds(1.3f);
 		combatController.releaseAttack();
 		timeBetweenAttacksLeft = timeBetweenAttacks;
 		charging = false;
+		selectRandomCareBehave = true;
 	}
 
 	private void TryToBlock(){
@@ -145,6 +183,7 @@ public class AIController : MonoBehaviour {
 				Block();
 			}
 		}
+		selectRandomCareBehave = true;
 	}
 
 	private void Block(){
