@@ -65,6 +65,8 @@ public class CombatController : MonoBehaviour {
 
     public void releaseAttack()
     {
+		chargin_snd.Stop();
+
         if (attacking)
         {
             if (!charging)
@@ -77,7 +79,6 @@ public class CombatController : MonoBehaviour {
             {
                 animator.SetBool("charging", false);
                 makeDamegeIfEnemyHasBeenBeaten(1, 25);
-				chargin_snd.Stop();
 				chargedAttack_snd.Play();
             }
 
