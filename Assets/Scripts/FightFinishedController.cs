@@ -16,5 +16,8 @@ public class FightFinishedController : MonoBehaviour {
     void FightFinished(GameObject loser)
     {
         
+        loser.GetComponent<Animator>().SetTrigger("lose");
+        GameObject.FindGameObjectWithTag((loser.tag == "Player") ? "Player2" : "Player").GetComponent<Animator>().SetTrigger("win");
+        
     }
 }
