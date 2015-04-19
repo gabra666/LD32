@@ -1853,7 +1853,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 680335897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.71999979, y: 9.40999985, z: 0}
+  m_LocalPosition: {x: 5.71999979, y: 5.63000011, z: 0}
   m_LocalScale: {x: 123.660004, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1947051705}
@@ -4690,6 +4690,22 @@ Prefab:
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6194738, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
+      propertyPath: m_Offset.x
+      value: .903873444
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194738, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
+      propertyPath: m_Size.x
+      value: 2.80774498
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194738, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
+      propertyPath: m_Offset.y
+      value: -.83565712
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194738, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
+      propertyPath: m_Size.y
+      value: 5.94572449
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
   m_IsPrefabParent: 0
@@ -5361,6 +5377,22 @@ Prefab:
     - target: {fileID: 5026462, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
       propertyPath: m_GravityScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163932, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
+      propertyPath: m_Offset.x
+      value: .750392914
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163932, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
+      propertyPath: m_Size.x
+      value: 3.38758636
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163932, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
+      propertyPath: m_Offset.y
+      value: -.835655212
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163932, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
+      propertyPath: m_Size.y
+      value: 5.87750244
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
