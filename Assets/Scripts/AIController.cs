@@ -54,13 +54,14 @@ public class AIController : MonoBehaviour {
 			//BeAgressive;
 			BeAgressive();
 		}
-		else if(life.actualLife < life.maximunLife*0.75 && life.actualLife >= life.maximunLife*0.4){
+		else if(life.actualLife < life.maximunLife*0.75 && life.actualLife >= life.maximunLife*0f){
 			//BeCare;
 			blockProbability = 0.5f;
 			chargeAttackProbability = 0.45f;
 			BeCare();
 		}
 		else{
+			//No se usa
 			blockProbability = 0.75f;
 			chargeAttackProbability = 0.15f;
 			//BePassive;

@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AIController.cs">
     <Files>
+      <File FileName="Assets\Scripts\AIController.cs" Line="57" Column="92" />
       <File FileName="Assets\Scripts\CombatController.cs" Line="106" Column="48" />
-      <File FileName="Assets\Scripts\AIController.cs" Line="98" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
