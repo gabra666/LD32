@@ -24,20 +24,18 @@ public class Life : MonoBehaviour {
 
     void ReceiveDamage(Attack attack)
     {
-        if (!combatController.isBlocking())
-        {
-            combatController.damaged();
-            actualLife -= attack.damage;
-            gameObject.SendMessage("Hit");
-            GameObject.Find("PunchMessagesController").SendMessage("Show", enemy);
-        }
-        else if (combatController.isBlocking() && attack.attackType == 1)
-        {
-            combatController.breakDefense();
-            actualLife -= (float)(0.2 * attack.damage);
-        }
-        else
-            bloqueado_snd.Play();
+		if (!combatController.isBlocking ()) {
+			combatController.damaged ();
+			actualLife -= attack.damage;
+			gameObject.SendMessage ("Hit");
+			GameObject.Find ("PunchMessagesController").SendMessage ("Show", enemy);
+		} else if (combatController.isBlocking () && attack.attackType == 1) {
+			combatController.breakDefense ();
+			actualLife -= (float)(0.2 * attack.damage);
+		} else {
+			//gameObject.SendMessage ("hitBlocked");
+			bloqueado_snd.Play ();
+		}
         checkLife();
     }
 

@@ -5,6 +5,8 @@ using System.Collections;
 public class GUIFinishFightController : MonoBehaviour {
     public Text winnerMessage;
     private CanvasGroup canvasGroup;
+	public AudioSource win_snd;
+	public AudioSource lose_snd;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,10 @@ public class GUIFinishFightController : MonoBehaviour {
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1;
+		if (winnerName == "Player 1")
+			win_snd.Play ();
+		else 
+			lose_snd.Play();
         StartCoroutine("BackToMenu");
     }
 

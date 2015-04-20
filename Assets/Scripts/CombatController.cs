@@ -16,7 +16,7 @@ public class CombatController : MonoBehaviour {
 	public AudioSource attack_snd;
 	public AudioSource chargedAttack_snd;
 	public AudioSource grito_snd;
-	public AudioSource bloqueado_snd;
+	//public AudioSource bloqueado_snd;
     private Attack currentAttack;
     private AudioSource currentAttackTSound;
 
@@ -103,7 +103,8 @@ public class CombatController : MonoBehaviour {
 
         RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(rayOrigin, new Vector2(rayDirection, 0));
         foreach (RaycastHit2D raycast in objectBeaten)
-            if (raycast.collider.gameObject != gameObject && Mathf.Abs(gameObject.transform.position.x - raycast.collider.gameObject.transform.position.x) <= attackRange)
+            if (raycast.collider.gameObject != gameObject && 
+			    	Mathf.Abs(gameObject.transform.position.x - raycast.collider.gameObject.transform.position.x) <= attackRange)
                 raycast.collider.gameObject.SendMessage("ReceiveDamage", currentAttack, SendMessageOptions.DontRequireReceiver);
     }
 
@@ -120,6 +121,13 @@ public class CombatController : MonoBehaviour {
         movementController.blockMovement(attacking);
         makeDamegeIfEnemyHasBeenBeaten();
     }
+	
+	public void hitBlocked()
+	{
+		Debug.Log (" golpe bloqueado");
+		//deberia ver como averiguo cual es el sonido del golpe en concreto que se bloqueo para pararlo
+		//attack_snd.Stop ();
+	}
 
     public bool isBlocking()
     {
