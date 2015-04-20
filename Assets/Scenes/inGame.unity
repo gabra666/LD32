@@ -4818,6 +4818,10 @@ Prefab:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11418784, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
+      propertyPath: bloqueado_snd
+      value: 
+      objectReference: {fileID: 1699423624}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
   m_IsPrefabParent: 0
@@ -5187,6 +5191,11 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!82 &1699423624
+AudioSource:
+  m_PrefabParentObject: {fileID: 8283432, guid: 65cd2d4bac70a964cbe291f41be80232,
+    type: 2}
+  m_PrefabInternal: {fileID: 1699423608}
 --- !u!1 &1757215773
 GameObject:
   m_ObjectHideFlags: 0
@@ -6139,6 +6148,10 @@ Prefab:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11405012, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
+      propertyPath: bloqueado_snd
+      value: 
+      objectReference: {fileID: 2012991479}
     m_RemovedComponents:
     - {fileID: 11462500, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
@@ -6439,6 +6452,11 @@ MonoBehaviour:
   - {fileID: 2012991468}
   - {fileID: 2012991467}
   - {fileID: 2012991466}
+--- !u!82 &2012991479
+AudioSource:
+  m_PrefabParentObject: {fileID: 8201270, guid: e4cbd9c56b400b143916bd865baff96b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2012991464}
 --- !u!1 &2026602392
 GameObject:
   m_ObjectHideFlags: 0

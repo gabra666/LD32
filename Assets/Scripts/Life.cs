@@ -5,6 +5,7 @@ using Assets.Scripts;
 public class Life : MonoBehaviour {
     public int maximunLife;
     public float actualLife;
+    public AudioSource bloqueado_snd;
 
     private CombatController combatController;
 
@@ -32,6 +33,8 @@ public class Life : MonoBehaviour {
             combatController.breakDefense();
             actualLife -= (float)(0.2 * attack.damage);
         }
+        else
+            bloqueado_snd.Play();
         checkLife();
     }
 

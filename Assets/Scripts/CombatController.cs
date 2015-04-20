@@ -56,7 +56,7 @@ public class CombatController : MonoBehaviour {
         animator.SetBool("punching", true);
         currentAttack = new Attack(0, 10);
         currentAttackTSound = attack_snd;
-        
+        currentAttackTSound.Play();
     }
 
     private void chargeFailed()
@@ -101,7 +101,6 @@ public class CombatController : MonoBehaviour {
         int rayDirection = movementController.isFacingRight() ? 1 : -1;
         Vector3 rayOrigin = gameObject.transform.position;
 
-        currentAttackTSound.Play();
 
         RaycastHit2D[] objectBeaten = Physics2D.RaycastAll(rayOrigin, new Vector2(rayDirection, 0));
         foreach (RaycastHit2D raycast in objectBeaten)
