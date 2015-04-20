@@ -19,7 +19,6 @@ public class FollowPlayers : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         //float xPosition = player2.transform.position.x + (player1.transform.position.x - player2.transform.position.x)/2;
         Vector3 newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 

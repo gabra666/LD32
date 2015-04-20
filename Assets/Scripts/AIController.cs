@@ -12,7 +12,7 @@ public class AIController : MonoBehaviour {
 	private float randomCareBehave;
 	private bool selectRandomCareBehave = true;
 
-	public float closeEnoughDistance = 0.5f;
+	public float closeEnoughDistance = 10f;
 	public float maxDistance = 1.5f;
 	public float timeBetweenAttacks = 2f;
 	public float blockProbability = 0.25f;
@@ -121,7 +121,6 @@ public class AIController : MonoBehaviour {
 	}
 
 	private void MoveTowardsPlayer(){
-		Debug.Log("Move");
 		if(movementController.isFacingRight()){
 			movement.x = 1;
 		}else{
@@ -148,8 +147,9 @@ public class AIController : MonoBehaviour {
 			float randomValue = Random.Range(0.0f,1.0f);
 
 			if(randomValue < chargeAttackProbability){
-				charging = true;
-				StartCoroutine(DoChargeAttack());
+				//charging = true;
+				//StartCoroutine(DoChargeAttack());
+                DoNormalAttack();
 			}else{
 				DoNormalAttack();
 			}
@@ -159,7 +159,7 @@ public class AIController : MonoBehaviour {
 	private void DoNormalAttack ()
 	{
 		combatController.chargeAttack();
-		combatController.releaseAttack();
+		//combatController.releaseAttack();
 		timeBetweenAttacksLeft = timeBetweenAttacks;
 
 		selectRandomCareBehave = true;
