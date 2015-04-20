@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour {
     public GameObject creditsPanel;
 
     private CanvasGroup canvasGroup;
+    private AudioSource theme;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +22,8 @@ public class MenuController : MonoBehaviour {
 		if (StorageManager.Instance.SeenSplash == true) {
 			splash.SetActive(false);
 		}
-	
+
+        theme = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -37,6 +39,7 @@ public class MenuController : MonoBehaviour {
 
 	public void LoadCreditsPanel()
 	{
+        theme.Stop();
         StartCoroutine("CrossFade", creditsPanel);
 	}
 
@@ -62,6 +65,7 @@ public class MenuController : MonoBehaviour {
 
     void BringToFront()
     {
+        theme.Play();
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1;

@@ -10,10 +10,11 @@ public class CreditsController : MonoBehaviour {
 
     private bool start = false;
     public float speed;
-
+    private AudioSource creditsAudio;
     // Use this for initialization
     void Start()
     {
+        creditsAudio = gameObject.GetComponent<AudioSource>();
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
         scroll.value = 1;
     }
@@ -32,6 +33,7 @@ public class CreditsController : MonoBehaviour {
     private IEnumerator BackToMenu()
     {
         yield return new WaitForSeconds(4);
+        creditsAudio.Stop();
         scroll.value = 1;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
@@ -46,6 +48,7 @@ public class CreditsController : MonoBehaviour {
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1;
         StartCoroutine("ShowCredits", true);
+        creditsAudio.Play();
     }
 
     private IEnumerator ShowCredits(bool show)
