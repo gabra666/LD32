@@ -25,6 +25,7 @@ public class Life : MonoBehaviour {
         {
             combatController.damaged();
             actualLife -= attack.damage;
+            gameObject.SendMessage("Hit");
         }
         else if (combatController.isBlocking() && attack.attackType == 1)
         {
