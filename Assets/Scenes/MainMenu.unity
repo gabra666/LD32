@@ -287,7 +287,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Audio Search and Adaptation\n\nFernando Ram\xEDrez P\xE9rez\n"
+  m_Text: 'Audio Design
+
+
+    Timothy McHugh
+
+'
 --- !u!222 &118249546
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -739,7 +744,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2124645407}
   m_Direction: 2
   m_Value: .5
-  m_Size: .139741018
+  m_Size: .139741004
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1581,7 +1586,7 @@ GameObject:
   - 114: {fileID: 452747650}
   - 114: {fileID: 452747649}
   m_Layer: 5
-  m_Name: Game Concept 2
+  m_Name: Game Programming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1880,7 +1885,7 @@ GameObject:
   - 114: {fileID: 671846845}
   - 114: {fileID: 671846844}
   m_Layer: 5
-  m_Name: Game Concept 3
+  m_Name: Game Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2106,7 +2111,7 @@ GameObject:
   - 114: {fileID: 775664741}
   - 114: {fileID: 775664740}
   m_Layer: 5
-  m_Name: Game Concept 4
+  m_Name: Game Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3436,7 +3441,7 @@ GameObject:
   - 114: {fileID: 1588727305}
   - 114: {fileID: 1588727304}
   m_Layer: 5
-  m_Name: Game Concept 1
+  m_Name: Game Design
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

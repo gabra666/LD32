@@ -15,6 +15,7 @@ public class MenuController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		StorageManager.Instance.SeenSplash = true;
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
 		image.CrossFadeAlpha (0f, 0f,true);
 		if (StorageManager.Instance.SeenSplash == true) {
