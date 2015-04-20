@@ -33,18 +33,20 @@ public class CombatController : MonoBehaviour {
 	void Update () {
         if (attacking)
         {
-            //timeTillAttackButtonPressed += Time.deltaTime;
+            timeTillAttackButtonPressed += Time.deltaTime;
             if (!charging)
             {
-                if (timeTillAttackButtonPressed >= 1.25)
+                if (timeTillAttackButtonPressed >= 0.3)
                 {
                     animator.SetBool("charging", true);
                     charging = true;
                 }
             }
+                /*
             else
                 if (maximunTimeCharging < timeTillAttackButtonPressed)
                     chargeFailed();
+                 * */
         }
 	}
 
@@ -54,11 +56,6 @@ public class CombatController : MonoBehaviour {
         {
             attacking = true;
             movementController.blockMovement(attacking);
-
-            animator.SetBool("punching", true);
-            currentAttack = new Attack(0, 10);
-            currentAttackTSound = attack_snd;
-            currentAttackTSound.Play();
         }
     }
 
@@ -74,7 +71,6 @@ public class CombatController : MonoBehaviour {
 
     public void releaseAttack()
     {
-        return;
 		chargin_snd.Stop();
 
         if (attacking)
@@ -91,7 +87,7 @@ public class CombatController : MonoBehaviour {
                 currentAttack = new Attack(1, 25);
 				currentAttackTSound = chargedAttack_snd;
             }
-
+            currentAttackTSound.Play();
             timeTillAttackButtonPressed = 0;
             attacking = false;
             charging = false;

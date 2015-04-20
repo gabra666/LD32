@@ -145,8 +145,8 @@ public class AIController : MonoBehaviour {
 			float randomValue = Random.Range(0.0f,1.0f);
 
 			if(randomValue < chargeAttackProbability){
-				//charging = true;
-				//StartCoroutine(DoChargeAttack());
+				charging = true;
+				StartCoroutine(DoChargeAttack());
                 DoNormalAttack();
 			}else{
 				DoNormalAttack();
