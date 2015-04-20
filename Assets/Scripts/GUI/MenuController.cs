@@ -23,6 +23,8 @@ public class MenuController : MonoBehaviour {
 			splash.SetActive(false);
 		}
 
+        StorageManager.Instance.Player1CharacterName = "";
+        StorageManager.Instance.Player2CharacterName = "";
         theme = gameObject.GetComponent<AudioSource>();
 	}
 	

@@ -2318,7 +2318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Music\n\nGonzalo D\xEDaz Hierro\nMarkus Robam\n"
+  m_Text: "Music\n\nGonzalo D\xEDaz Yerro\nMarkus Robam\n"
 --- !u!222 &775664742
 CanvasRenderer:
   m_ObjectHideFlags: 0
