@@ -33,7 +33,7 @@ public class CombatController : MonoBehaviour {
 	void Update () {
         if (attacking)
         {
-            timeTillAttackButtonPressed += Time.deltaTime;
+            //timeTillAttackButtonPressed += Time.deltaTime;
             if (!charging)
             {
                 if (timeTillAttackButtonPressed >= 1.25)
@@ -52,7 +52,11 @@ public class CombatController : MonoBehaviour {
     {
         attacking = true;
         movementController.blockMovement(attacking);
-		chargin_snd.Play();
+
+        animator.SetBool("punching", true);
+        currentAttack = new Attack(0, 10);
+        currentAttackTSound = attack_snd;
+        
     }
 
     private void chargeFailed()
@@ -67,6 +71,7 @@ public class CombatController : MonoBehaviour {
 
     public void releaseAttack()
     {
+        return;
 		chargin_snd.Stop();
 
         if (attacking)

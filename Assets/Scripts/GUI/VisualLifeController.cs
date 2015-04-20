@@ -11,6 +11,8 @@ public class VisualLifeController : MonoBehaviour
     public Image visualLife;
     public float maxTimeLifebarAnimation = 1;
 
+
+
     private float currentLife;
     private int maxLife;
 
