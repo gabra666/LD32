@@ -48,6 +48,8 @@ public class CombatController : MonoBehaviour {
                     chargeFailed();
                  * */
         }
+        else
+            animator.SetBool("punching", false);
 	}
 
     public void chargeAttack()
@@ -120,6 +122,7 @@ public class CombatController : MonoBehaviour {
         attacking = false;
         movementController.blockMovement(attacking);
         makeDamegeIfEnemyHasBeenBeaten();
+        animator.SetBool("punching", false);
     }
 	
 	public void hitBlocked()

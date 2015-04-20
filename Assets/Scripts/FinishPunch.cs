@@ -10,7 +10,7 @@ public class FinishPunch : StateMachineBehaviour {
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (stateInfo.normalizedTime <= 0.9)    
+        if (stateInfo.normalizedTime <= 1)    
             animator.SetBool("punching", false);
 	}
 
