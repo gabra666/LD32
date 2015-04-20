@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 49485608257dd40f8bd02989dc658ed7
-timeCreated: 1429451103
+timeCreated: 1429521913
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,7 +60,7 @@ TextureImporter:
         width: 270
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Character-Perfl_1
       rect:
@@ -70,17 +70,17 @@ TextureImporter:
         width: 526
         height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Character-Perfl_2
       rect:
         serializedVersion: 2
         x: 194
-        y: 25
+        y: 50
         width: 526
-        height: 281
+        height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

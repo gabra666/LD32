@@ -5,11 +5,13 @@ using System.Collections;
 public class PunchMessagesController : MonoBehaviour {
     public GameObject player1Message;
     public GameObject player2Message;
+    public Image image1;
+    public Image image2;
     public Sprite[] sprites;
 
 
-    private Transform player1MessagePosition;
-    private Transform player2MessagePosition;
+    private GameObject player1MessagePosition;
+    private GameObject player2MessagePosition;
 
 	// Use this for initialization
 	void Start () {
@@ -24,11 +26,12 @@ public class PunchMessagesController : MonoBehaviour {
     void Show(GameObject player)
     {
         GameObject message = (player.tag == "Player") ? player1Message : player2Message;
-        Transform messagePosition = (player.tag == "Player") ? player1MessagePosition : player2MessagePosition;
+        Image image = (player.tag == "Player") ? image1 : image2;
+        Transform messagePosition = (player.tag == "Player") ? player1MessagePosition.transform : player2MessagePosition.transform;
         int index = Random.Range(0, sprites.Length -1);
         message.SetActive(true);
-        message.transform.position = messagePosition.position;
-        message.GetComponent<Image>().sprite = sprites[index];
+        message.transform.position = Camera.main.WorldToScreenPoint(messagePosition.position);
+        image.sprite = sprites[index];
         StartCoroutine("MessageDisappear", message);
     }
 
@@ -38,13 +41,15 @@ public class PunchMessagesController : MonoBehaviour {
         message.SetActive(false);
     }
 
-    void SetPlayer1TransformMessage(Transform player1Message)
+    void SetPlayer1TransformMessage(GameObject player1Message)
     {
+        Debug.Log("player1");
         player1MessagePosition = player1Message;
     }
 
-    void SetPlayer2TransformMessage(Transform player2Message)
+    void SetPlayer2TransformMessage(GameObject player2Message)
     {
+        Debug.Log("Player2");
         player2MessagePosition = player2Message;
     }
 }

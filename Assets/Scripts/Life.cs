@@ -6,6 +6,7 @@ public class Life : MonoBehaviour {
     public int maximunLife;
     public float actualLife;
     public AudioSource bloqueado_snd;
+    public GameObject enemy;
 
     private CombatController combatController;
 
@@ -13,6 +14,7 @@ public class Life : MonoBehaviour {
 	void Start () {
         actualLife = maximunLife;
         combatController = gameObject.GetComponent<CombatController>();
+        enemy = GameObject.FindGameObjectWithTag((tag == "Player") ? "Player2" : "Player");
 	}
 	
 	// Update is called once per frame
@@ -27,6 +29,7 @@ public class Life : MonoBehaviour {
             combatController.damaged();
             actualLife -= attack.damage;
             gameObject.SendMessage("Hit");
+            GameObject.Find("PunchMessagesController").SendMessage("Show", enemy);
         }
         else if (combatController.isBlocking() && attack.attackType == 1)
         {
