@@ -52,13 +52,11 @@ public class PunchMessagesController : MonoBehaviour {
 
     void SetPlayer1TransformMessage(GameObject player1Message)
     {
-        Debug.Log("player1");
         player1MessagePosition = player1Message;
     }
 
     void SetPlayer2TransformMessage(GameObject player2Message)
     {
-        Debug.Log("Player2");
         player2MessagePosition = player2Message;
     }
 

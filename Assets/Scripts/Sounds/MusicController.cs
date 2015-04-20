@@ -6,7 +6,8 @@ public class MusicController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        loops[(int)Random.Range(0, 1)].Play();
+        int index = (int)(Random.Range(0, 10) % 2);
+        loops[index].Play();
 	}
 	
 	// Update is called once per frame
