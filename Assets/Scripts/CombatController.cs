@@ -50,13 +50,16 @@ public class CombatController : MonoBehaviour {
 
     public void chargeAttack()
     {
-        attacking = true;
-        movementController.blockMovement(attacking);
+        if (!attacking)
+        {
+            attacking = true;
+            movementController.blockMovement(attacking);
 
-        animator.SetBool("punching", true);
-        currentAttack = new Attack(0, 10);
-        currentAttackTSound = attack_snd;
-        currentAttackTSound.Play();
+            animator.SetBool("punching", true);
+            currentAttack = new Attack(0, 10);
+            currentAttackTSound = attack_snd;
+            currentAttackTSound.Play();
+        }
     }
 
     private void chargeFailed()

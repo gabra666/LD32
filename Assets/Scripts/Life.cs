@@ -44,6 +44,9 @@ public class Life : MonoBehaviour {
     private void checkLife()
     {
         if (actualLife <= 0)
+        {
             GameObject.FindGameObjectWithTag("GameController").SendMessage("FightFinished", gameObject);
+            GameObject.Find("PunchMessagesController").SendMessage("ShowDefeatedMessage", enemy);
+        }
     }
 }
