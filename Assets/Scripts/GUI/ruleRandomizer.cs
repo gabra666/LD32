@@ -9,16 +9,17 @@ public class ruleRandomizer : MonoBehaviour {
 	private float random;
 	// Use this for initialization
 	void Start () {
-
-		random = (int)Random.Range (0, 7);
-		this.GetComponent<Image> ().sprite = rules [(int)random];
-
-
-
+        PassRule();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+    void PassRule()
+    {
+        random = (int)Random.Range(0, 7);
+        this.GetComponent<Image>().sprite = rules[(int)random];
+    }
 }

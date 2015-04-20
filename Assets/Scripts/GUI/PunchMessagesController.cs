@@ -8,8 +8,8 @@ public class PunchMessagesController : MonoBehaviour {
     public Sprite[] sprites;
 
 
-    public Transform player1MessagePosition;
-    public Transform player2MessagePosition;
+    private Transform player1MessagePosition;
+    private Transform player2MessagePosition;
 
 	// Use this for initialization
 	void Start () {
@@ -25,10 +25,10 @@ public class PunchMessagesController : MonoBehaviour {
     {
         GameObject message = (player.tag == "Player") ? player1Message : player2Message;
         Transform messagePosition = (player.tag == "Player") ? player1MessagePosition : player2MessagePosition;
-        message.transform.position = messagePosition.position;
         int index = Random.Range(0, sprites.Length -1);
-        message.GetComponent<Image>().sprite = sprites[index];
         message.SetActive(true);
+        message.transform.position = messagePosition.position;
+        message.GetComponent<Image>().sprite = sprites[index];
         StartCoroutine("MessageDisappear", message);
     }
 
@@ -38,4 +38,13 @@ public class PunchMessagesController : MonoBehaviour {
         message.SetActive(false);
     }
 
+    void SetPlayer1TransformMessage(Transform player1Message)
+    {
+        player1MessagePosition = player1Message;
+    }
+
+    void SetPlayer2TransformMessage(Transform player2Message)
+    {
+        player2MessagePosition = player2Message;
+    }
 }

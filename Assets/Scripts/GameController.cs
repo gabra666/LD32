@@ -62,6 +62,6 @@ public class GameController : MonoBehaviour {
         winner.GetComponent<Animator>().SetTrigger("win");
         winner.GetComponent<InputController>().enabled = false;
 
-        fightFinishedGUI.SendMessage("FightFinished", winner.name);
+        fightFinishedGUI.SendMessage("FightFinished", (winner.tag == "Player") ? "Player 1" : (StorageManager.Instance.NumberOfPlayers == 2) ? "Player 2" : "IA");
     }
 }

@@ -383,6 +383,7 @@ MonoBehaviour:
   characterSlectionMessage: {fileID: 1515856859}
   image: {fileID: 152059485}
   mainMenuPanel: {fileID: 1259006476}
+  rules: {fileID: 1443561426}
 --- !u!225 &128201621
 CanvasGroup:
   m_ObjectHideFlags: 0

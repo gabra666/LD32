@@ -7,6 +7,7 @@ public class SelectionController : MonoBehaviour {
     public Text characterSlectionMessage;
     public Image image;
     public GameObject mainMenuPanel;
+    public GameObject rules;
 
     private StorageManager storageManager;
     private CanvasGroup canvasGroup;
@@ -34,6 +35,7 @@ public class SelectionController : MonoBehaviour {
             storageManager.Player2CharacterName = characterName;
             loadGame();
         }
+        rules.SendMessage("PassRule");
     }
 
     public void goBack()
@@ -42,6 +44,7 @@ public class SelectionController : MonoBehaviour {
         {
             storageManager.Player1CharacterName = "";
             characterSlectionMessage.text = "Player 1, select your character";
+            rules.SendMessage("PassRule");
         }
         else
             StartCoroutine("BackToMenu", 1);
