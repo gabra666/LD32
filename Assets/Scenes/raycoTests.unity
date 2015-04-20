@@ -299,6 +299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximunLife: 100
   actualLife: 0
+  bloqueado_snd: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!114 &977240024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,6 +876,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximunLife: 100
   actualLife: 0
+  bloqueado_snd: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!82 &1037826546
 AudioSource:
   m_ObjectHideFlags: 0

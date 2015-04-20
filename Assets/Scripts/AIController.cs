@@ -49,7 +49,7 @@ public class AIController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector2 movement = new Vector2(0,0);
+		movement = new Vector2(0,0);
 		if(life.actualLife >= life.maximunLife*0.75){
 			//BeAgressive;
 			BeAgressive();
@@ -67,7 +67,7 @@ public class AIController : MonoBehaviour {
 			//BePassive;
 			BePassive();
 		}
-
+        movementController.setMovementVector(movement);
 	}
 
 
@@ -126,7 +126,6 @@ public class AIController : MonoBehaviour {
 		}else{
 			movement.x = -1;
 		}
-		movementController.setMovementVector(movement);
 	}
 
 	private void MoveAwayFromPlayer(){
@@ -136,7 +135,6 @@ public class AIController : MonoBehaviour {
 		}else{
 			movement.x = 1;
 		}
-		movementController.setMovementVector(movement);
 	}
 
 	private void Attack(){
