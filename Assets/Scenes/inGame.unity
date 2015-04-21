@@ -634,7 +634,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 223948344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5999999, y: 19, z: 0}
+  m_LocalPosition: {x: 8.64999962, y: 19, z: 0}
   m_LocalScale: {x: 1, y: 49.3100014, z: 1}
   m_Children: []
   m_Father: {fileID: 1947051705}
@@ -5014,7 +5014,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1699423609 stripped
+--- !u!1 &1699423609
 GameObject:
   m_PrefabParentObject: {fileID: 125844, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
   m_PrefabInternal: {fileID: 1699423608}
@@ -5380,7 +5380,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!1 &1699423616 stripped
+--- !u!1 &1699423616
 GameObject:
   m_PrefabParentObject: {fileID: 198602, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
   m_PrefabInternal: {fileID: 1699423608}
@@ -5395,7 +5395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5cbddcad827dc4fa143af90071db4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1699423624 stripped
+--- !u!82 &1699423624
 AudioSource:
   m_PrefabParentObject: {fileID: 8283432, guid: 65cd2d4bac70a964cbe291f41be80232,
     type: 2}
@@ -6400,7 +6400,7 @@ Prefab:
     - {fileID: 11462500, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2012991465 stripped
+--- !u!1 &2012991465
 GameObject:
   m_PrefabParentObject: {fileID: 112898, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
   m_PrefabInternal: {fileID: 2012991464}
@@ -6696,7 +6696,7 @@ MonoBehaviour:
   - {fileID: 2012991468}
   - {fileID: 2012991467}
   - {fileID: 2012991466}
---- !u!1 &2012991471 stripped
+--- !u!1 &2012991471
 GameObject:
   m_PrefabParentObject: {fileID: 176730, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
   m_PrefabInternal: {fileID: 2012991464}
@@ -6711,7 +6711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5cbddcad827dc4fa143af90071db4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &2012991479 stripped
+--- !u!82 &2012991479
 AudioSource:
   m_PrefabParentObject: {fileID: 8201270, guid: e4cbd9c56b400b143916bd865baff96b,
     type: 2}

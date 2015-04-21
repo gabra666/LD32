@@ -13,10 +13,10 @@ public class AIController : MonoBehaviour {
 	private bool selectRandomCareBehave = true;
 
 	public float closeEnoughDistance = 10f;
-	public float maxDistance = 1.5f;
+	public float maxDistance = 3f;
 	public float timeBetweenAttacks = 2f;
-	public float blockProbability = 0.25f;
-	public float chargeAttackProbability = 0.4f;
+	public float blockProbability = 25f;
+	public float chargeAttackProbability = 15f;
 
 
 	private float timeBetweenAttacksLeft = 0;
@@ -56,14 +56,14 @@ public class AIController : MonoBehaviour {
 		}
 		else if(life.actualLife < life.maximunLife*0.75 && life.actualLife >= life.maximunLife*0f){
 			//BeCare;
-			blockProbability = 0.5f;
-			chargeAttackProbability = 0.45f;
+			blockProbability = 50f;
+			chargeAttackProbability = 45f;
 			BeCare();
 		}
 		else{
 			//No se usa
-			blockProbability = 0.75f;
-			chargeAttackProbability = 0.15f;
+			blockProbability = 50f;
+			chargeAttackProbability = 15f;
 			//BePassive;
 			BePassive();
 		}
@@ -76,7 +76,7 @@ public class AIController : MonoBehaviour {
 		if(DistanceToPlayer() > closeEnoughDistance){
 			MoveTowardsPlayer();
 		}else{
-			if(Random.Range(0f,1f)<0.5){
+			if(Random.Range(0f,1f)<0.7){
 				Attack();
 			}else{
 				TryToBlock();
@@ -142,7 +142,7 @@ public class AIController : MonoBehaviour {
 		timeBetweenAttacksLeft -= Time.deltaTime;
 		if(timeBetweenAttacksLeft<0 && !charging){
 
-			float randomValue = Random.Range(0.0f,1.0f);
+			float randomValue = Random.Range(0.0f,100.0f);
 
 			if(randomValue < chargeAttackProbability){
 				charging = true;
@@ -176,7 +176,7 @@ public class AIController : MonoBehaviour {
 	private void TryToBlock(){
 		if(playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Punch") || 
 		   playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("ReleaseAttack")){
-			float randomBlockValue = Random.Range(0f,1f);
+			float randomBlockValue = Random.Range(0f,100f);
 			if(randomBlockValue < blockProbability){
 				Block();
 			}
