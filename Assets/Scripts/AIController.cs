@@ -157,7 +157,7 @@ public class AIController : MonoBehaviour {
 	private void DoNormalAttack ()
 	{
 		combatController.chargeAttack();
-		//combatController.releaseAttack();
+		combatController.releaseAttack();
 		timeBetweenAttacksLeft = timeBetweenAttacks;
 
 		selectRandomCareBehave = true;
