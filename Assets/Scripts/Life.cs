@@ -32,6 +32,7 @@ public class Life : MonoBehaviour {
 		} else if (combatController.isBlocking () && attack.attackType == 1) {
 			combatController.breakDefense ();
 			actualLife -= (float)(0.2 * attack.damage);
+            gameObject.SendMessage("Hit");
 		} else {
 			//gameObject.SendMessage ("hitBlocked");
 			bloqueado_snd.Play ();

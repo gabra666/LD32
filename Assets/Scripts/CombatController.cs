@@ -149,4 +149,9 @@ public class CombatController : MonoBehaviour {
         animator.SetTrigger("damageReceived");
 		grito_snd.Play ();
     }
+
+    public void defenseBroken()
+    {
+        grito_snd.Play();
+    }
 }
