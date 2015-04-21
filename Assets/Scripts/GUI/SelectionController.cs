@@ -63,6 +63,7 @@ public class SelectionController : MonoBehaviour {
 
     private void loadGame()
     {
+        canvasGroup.interactable = false;
         StartCoroutine("CrossFade", 1);
     }
 
