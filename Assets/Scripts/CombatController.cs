@@ -3,6 +3,8 @@ using System.Collections;
 using Assets.Scripts;
 
 public class CombatController : MonoBehaviour {
+   public float coolDownAttack;
+   public float cooldDownBlock;
     public int maximunTimeCharging;
     public int chargedAttackMultiplier;
     public float attackRange;
@@ -22,6 +24,8 @@ public class CombatController : MonoBehaviour {
 
     private Animator animator;
     private MovementController movementController;
+   private float lastAttackTime = 0;
+   private float lastBlockTime = 0;
 	// Use this for initialization
 	void Start () {
 	    animator = gameObject.GetComponent<Animator>();
@@ -54,8 +58,9 @@ public class CombatController : MonoBehaviour {
 
     public void chargeAttack()
     {
-        if (!attacking)
+        if (!attacking && Time.time - lastAttackTime >= coolDownAttack)
         {
+         lastAttackTime = Time.time;
             attacking = true;
             movementController.blockMovement(attacking);
         }
@@ -112,6 +117,12 @@ public class CombatController : MonoBehaviour {
 
     public void block(bool block)
     {
+      if (block && Time.time - lastBlockTime < cooldDownBlock) {
+         return;
+      } else if (block) {
+         lastBlockTime = Time.time;
+      }
+
         blocking = block;
         animator.SetBool("blocking", blocking);
         movementController.blockMovement(blocking);

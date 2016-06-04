@@ -68,7 +68,9 @@ public class MenuController : MonoBehaviour {
 
     void BringToFront()
     {
+      if (!theme.isPlaying) {
         theme.Play();
+      }
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1;
