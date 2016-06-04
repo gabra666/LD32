@@ -3,6 +3,7 @@ using System.Collections;
 using Assets.Scripts;
 
 public class Life : MonoBehaviour {
+   public float damageReduceFactorIfBlocking;
     public int maximunLife;
     public float actualLife;
     public AudioSource bloqueado_snd;
@@ -34,8 +35,9 @@ public class Life : MonoBehaviour {
 			actualLife -= (float)(0.2 * attack.damage);
             gameObject.SendMessage("Hit");
 		} else {
-			//gameObject.SendMessage ("hitBlocked");
-			bloqueado_snd.Play ();
+         //gameObject.SendMessage ("hitBlocked");
+         actualLife -= (float) (damageReduceFactorIfBlocking * attack.damage);
+         bloqueado_snd.Play ();
 		}
         checkLife();
     }
