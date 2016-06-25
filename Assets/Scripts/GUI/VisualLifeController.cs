@@ -39,7 +39,7 @@ public class VisualLifeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float damage = currentLife - playerLife.actualLife;
+        float damage = currentLife - playerLife.currentLife;
         currentLife -= damage;
         StartCoroutine(CoolDownDamage(damage));
     }

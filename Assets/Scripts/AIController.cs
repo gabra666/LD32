@@ -50,11 +50,11 @@ public class AIController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		movement = new Vector2(0,0);
-		if(life.actualLife >= life.maximunLife*0.75){
+		if(life.currentLife >= life.maximunLife*0.75){
 			//BeAgressive;
 			BeAgressive();
 		}
-		else if(life.actualLife < life.maximunLife*0.75 && life.actualLife >= life.maximunLife*0f){
+		else if(life.currentLife < life.maximunLife*0.75 && life.currentLife >= life.maximunLife*0f){
 			//BeCare;
 			blockProbability = 50f;
 			chargeAttackProbability = 45f;

@@ -4,50 +4,46 @@ using Assets.Scripts;
 
 public class Life : MonoBehaviour {
    public float damageReduceFactorIfBlocking;
-    public int maximunLife;
-    public float actualLife;
-    public AudioSource bloqueado_snd;
-    public GameObject enemy;
+   public int maximunLife;
+   public float currentLife;
+   public AudioSource bloqueado_snd;
+   public GameObject enemy;
 
-    private CombatController combatController;
+   private CombatController combatController;
 
-	// Use this for initialization
-	void Start () {
-        actualLife = maximunLife;
-        combatController = gameObject.GetComponent<CombatController>();
-        enemy = GameObject.FindGameObjectWithTag((tag == "Player") ? "Player2" : "Player");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+   // Use this for initialization
+   void Start () {
+      currentLife = maximunLife;
+      combatController = gameObject.GetComponent<CombatController>();
+      enemy = GameObject.FindGameObjectWithTag((tag == "Player") ? "Player2" : "Player");
+   }
 
-    void ReceiveDamage(Attack attack)
-    {
-		if (!combatController.isBlocking ()) {
-			combatController.damaged ();
-			actualLife -= attack.damage;
-			gameObject.SendMessage ("Hit");
-			GameObject.Find ("PunchMessagesController").SendMessage ("Show", enemy);
-		} else if (combatController.isBlocking () && attack.attackType == 1) {
-			combatController.breakDefense ();
-			actualLife -= (float)(0.2 * attack.damage);
+   void ReceiveDamage (Attack attack) {
+      if (!combatController.isBlocking()) {
+         combatController.damaged();
+         currentLife -= attack.damage;
+         gameObject.SendMessage("Hit");
+         GameObject.Find("PunchMessagesController").SendMessage("Show", enemy);
+      } else if (combatController.IsParry) {
+         combatController.MakeParry();
+      } else {
+         if (combatController.isBlocking() && attack.attackType == 1) {
+            combatController.breakDefense();
+            currentLife -= (float) (0.2 * attack.damage);
             gameObject.SendMessage("Hit");
-		} else {
-         //gameObject.SendMessage ("hitBlocked");
-         actualLife -= (float) (damageReduceFactorIfBlocking * attack.damage);
-         bloqueado_snd.Play ();
-		}
-        checkLife();
-    }
+         } else {
+            //gameObject.SendMessage ("hitBlocked");
+            currentLife -= (float) (damageReduceFactorIfBlocking * attack.damage);
+            bloqueado_snd.Play();
+         }
+      }
+      checkLife();
+   }
 
-    private void checkLife()
-    {
-        if (actualLife <= 0)
-        {
-            GameObject.FindGameObjectWithTag("GameController").SendMessage("FightFinished", gameObject);
-            GameObject.Find("PunchMessagesController").SendMessage("ShowDefeatedMessage", enemy);
-        }
-    }
+   private void checkLife () {
+      if (currentLife <= 0) {
+         GameObject.FindGameObjectWithTag("GameController").SendMessage("FightFinished", gameObject);
+         GameObject.Find("PunchMessagesController").SendMessage("ShowDefeatedMessage", enemy);
+      }
+   }
 }
