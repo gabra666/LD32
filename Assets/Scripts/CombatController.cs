@@ -28,6 +28,8 @@ public class CombatController : MonoBehaviour {
    private MovementController movementController;
    private float lastAttackTime = 0;
    private float lastBlockTime = 0;
+   [HideInInspector]
+   public bool BlockDisabled = false;
 
    // Use this for initialization
    void Start () {
@@ -80,9 +82,9 @@ public class CombatController : MonoBehaviour {
       }
    }
 
-   private void attack (float damageFactor) {
+   private void attack (float damageFactor, bool parry = false) {
       if (!charging) {
-         animator.SetBool("punching", true);
+         animator.SetBool(parry ? "parry" : "punching", true);
          currentAttack = new Attack(0, (int) (10 * damageFactor));
          currentAttackTSound = attack_snd;
       } else {
@@ -110,7 +112,7 @@ public class CombatController : MonoBehaviour {
    }
 
    public void block (bool block) {
-      if (block && Time.time - lastBlockTime < cooldDownBlock) {
+      if (block && (Time.time - lastBlockTime < cooldDownBlock || BlockDisabled)) {
          return;
       } else if (block) {
          lastBlockTime = Time.time;
@@ -157,7 +159,17 @@ public class CombatController : MonoBehaviour {
       get { return Time.time - lastBlockTime <= maximunBlockTimeUntillValidParry; }
    }
 
-   public void MakeParry () {
+   public void MakeParry (GameObject enemy) {
+      enemy.GetComponent<CombatController>().BlockDisabled = true;
+      StartCoroutine(parry(enemy));
+   }
+
+   private IEnumerator parry (GameObject enemy) {
+      block(false);
+      yield return new WaitForSeconds(0.2f);
       attack(parryExtraDamageFactor);
+      lastAttackTime = Time.time;
+      yield return new WaitForSeconds(0.4f);
+      enemy.GetComponent<CombatController>().BlockDisabled = false;
    }
 }

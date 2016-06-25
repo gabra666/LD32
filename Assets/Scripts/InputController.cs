@@ -50,7 +50,7 @@ public class InputController : MonoBehaviour {
    }
 
    private void checkPlayer2Input () {
-      Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), 0);
+      Vector2 movement = new Vector2(Input.GetAxis("HorizontalK"), 0);
       if (Input.GetJoystickNames().Length > 1) {
          movement.x = Input.GetAxis("movement2");
       }
@@ -61,7 +61,7 @@ public class InputController : MonoBehaviour {
       if (Input.GetKeyUp(KeyCode.RightShift) || Input.GetButtonUp("attack2"))
          combatController.releaseAttack();
 
-      if (Input.GetKey(KeyCode.Return) || Input.GetButtonDown("block2"))
+      if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("block2"))
          combatController.block(true);
       if (Input.GetKeyUp(KeyCode.Return) || Input.GetButtonUp("block2"))
          combatController.block(false);

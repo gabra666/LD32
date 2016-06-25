@@ -10,8 +10,9 @@ public class MenuController : MonoBehaviour {
 	public GameObject splash;
     public GameObject selectionCharacterPanel;
     public GameObject creditsPanel;
+   public Selectable firstSelectedObjectInMainMenu;
 
-    private CanvasGroup canvasGroup;
+   private CanvasGroup canvasGroup;
     private AudioSource theme;
 
 	// Use this for initialization
@@ -71,6 +72,7 @@ public class MenuController : MonoBehaviour {
       if (!theme.isPlaying) {
         theme.Play();
       }
+      firstSelectedObjectInMainMenu.Select();
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1;

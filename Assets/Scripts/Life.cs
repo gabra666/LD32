@@ -25,7 +25,7 @@ public class Life : MonoBehaviour {
          gameObject.SendMessage("Hit");
          GameObject.Find("PunchMessagesController").SendMessage("Show", enemy);
       } else if (combatController.IsParry) {
-         combatController.MakeParry();
+         combatController.MakeParry(enemy);
       } else {
          if (combatController.isBlocking() && attack.attackType == 1) {
             combatController.breakDefense();

@@ -8,6 +8,7 @@ public class SelectionController : MonoBehaviour {
     public Image image;
     public GameObject mainMenuPanel;
     public GameObject rules;
+   public Selectable firstSelectedObjectInSelectionMenu;
 
     private StorageManager storageManager;
     private CanvasGroup canvasGroup;
@@ -20,7 +21,9 @@ public class SelectionController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	   if (Input.GetButtonDown("Cancel") && canvasGroup.alpha == 1) {
+         goBack();
+      }
 	}
 
     public void CharacterSelected(string characterName)
@@ -71,11 +74,12 @@ public class SelectionController : MonoBehaviour {
     {
         image.CrossFadeAlpha(1f, 1.0f, true);
         yield return new WaitForSeconds(1.0f);
-        Application.LoadLevel(levelnumber);
+      UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(levelnumber);
     }
 
     void BringToFront()
     {
+      firstSelectedObjectInSelectionMenu.Select();
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1;
