@@ -5357,11 +5357,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11421334, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
       propertyPath: coolDownAttack
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11421334, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
       propertyPath: cooldDownBlock
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421334, guid: 65cd2d4bac70a964cbe291f41be80232, type: 2}
       propertyPath: maximunBlockTimeUntillValidParry
@@ -6875,11 +6875,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11403726, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
       propertyPath: coolDownAttack
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11403726, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
       propertyPath: cooldDownBlock
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11403726, guid: e4cbd9c56b400b143916bd865baff96b, type: 2}
       propertyPath: maximunBlockTimeUntillValidParry

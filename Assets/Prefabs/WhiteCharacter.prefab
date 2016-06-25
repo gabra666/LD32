@@ -1252,6 +1252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ad8d63c006daa48b8bb2c7920e93f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coolDownAttack: 1
+  cooldDownBlock: 0
   maximunTimeCharging: 3
   chargedAttackMultiplier: 1
   attackRange: 0.6
