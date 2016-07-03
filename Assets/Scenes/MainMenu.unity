@@ -412,6 +412,7 @@ MonoBehaviour:
   mainMenuPanel: {fileID: 1259006476}
   rules: {fileID: 1443561426}
   firstSelectedObjectInSelectionMenu: {fileID: 363133694}
+  inputModule: {fileID: 801985766}
 --- !u!225 &128201621
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -802,7 +803,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2124645407}
   m_Direction: 2
   m_Value: 0.5
-  m_Size: 0.13974102
+  m_Size: 0.13974103
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1501,7 +1502,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -1550,7 +1551,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1978,7 +1979,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -2016,7 +2017,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2027,7 +2028,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2038,7 +2039,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!1 &516724047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,7 +2533,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 801985769}
   - 114: {fileID: 801985768}
-  - 114: {fileID: 801985767}
   - 114: {fileID: 801985766}
   m_Layer: 0
   m_Name: EventSystem
@@ -2552,28 +2552,10 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
+  m_HorizontalAxis: movement1
   m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &801985767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801985765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
+  m_SubmitButton: attack1
+  m_CancelButton: block1
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
@@ -3300,6 +3282,7 @@ MonoBehaviour:
   selectionCharacterPanel: {fileID: 128201616}
   creditsPanel: {fileID: 357931104}
   firstSelectedObjectInMainMenu: {fileID: 1761456304}
+  inputModule: {fileID: 801985766}
 --- !u!82 &1259006482
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3313,7 +3296,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -3362,7 +3345,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

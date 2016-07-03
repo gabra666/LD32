@@ -1,88 +1,85 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 public class SelectionController : MonoBehaviour {
 
-    public Text characterSlectionMessage;
-    public Image image;
-    public GameObject mainMenuPanel;
-    public GameObject rules;
+   public Text characterSlectionMessage;
+   public Image image;
+   public GameObject mainMenuPanel;
+   public GameObject rules;
    public Selectable firstSelectedObjectInSelectionMenu;
+   public StandaloneInputModule inputModule;
 
-    private StorageManager storageManager;
-    private CanvasGroup canvasGroup;
+   private StorageManager storageManager;
+   private CanvasGroup canvasGroup;
 
-	// Use this for initialization
-	void Start () {
-        storageManager = StorageManager.Instance;
-        canvasGroup = gameObject.GetComponent<CanvasGroup>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	   if (Input.GetButtonDown("Cancel") && canvasGroup.alpha == 1) {
+   void Start () {
+      storageManager = StorageManager.Instance;
+      canvasGroup = gameObject.GetComponent<CanvasGroup>();
+   }
+
+   void Update () {
+      if (Input.GetButtonDown(inputModule.cancelButton) && canvasGroup.alpha == 1) {
          goBack();
       }
-	}
+   }
 
-    public void CharacterSelected(string characterName)
-    {
-        if (storageManager.Player1CharacterName == "")
-        {
-            storageManager.Player1CharacterName = characterName;
-            characterSlectionMessage.text = (storageManager.NumberOfPlayers == 1) ? "Select your oponent" : "Player 2, select your character";
-        }
-        else
-        {
-            storageManager.Player2CharacterName = characterName;
-            loadGame();
-        }
-        rules.SendMessage("PassRule");
-    }
+   public void CharacterSelected (string characterName) {
+      if (storageManager.Player1CharacterName == "") {
+         if (storageManager.NumberOfPlayers == 2) {
+            inputModule.cancelButton = "block2";
+            inputModule.submitButton = "attack2";
+            inputModule.horizontalAxis = "movement2";
+         }
+         storageManager.Player1CharacterName = characterName;
+         characterSlectionMessage.text = (storageManager.NumberOfPlayers == 1) ? "Select your oponent" : "Player 2, select your character";
+      } else {
+         storageManager.Player2CharacterName = characterName;
+         loadGame();
+      }
+      rules.SendMessage("PassRule");
+   }
 
-    public void goBack()
-    {
-        if (storageManager.Player1CharacterName != "")
-        {
-            storageManager.Player1CharacterName = "";
-            characterSlectionMessage.text = "Player 1, select your character";
-            rules.SendMessage("PassRule");
-        }
-        else
-            StartCoroutine("BackToMenu", 1);
-    }
+   public void goBack () {
+      if (storageManager.Player1CharacterName != "") {
+         inputModule.cancelButton = "block1";
+         inputModule.submitButton = "attack1";
+         inputModule.horizontalAxis = "movement1";
+         storageManager.Player1CharacterName = "";
+         characterSlectionMessage.text = "Player 1, select your character";
+         rules.SendMessage("PassRule");
+      } else
+         StartCoroutine("BackToMenu", 1);
+   }
 
-    IEnumerator BackToMenu(int levelnumber)
-    {
-        image.CrossFadeAlpha(1f, 0.5f, true);
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
-        canvasGroup.alpha = 0;
-        image.CrossFadeAlpha(0f, 0.5f, true);
-        mainMenuPanel.SendMessage("BringToFront");
-        yield return new WaitForSeconds(1.0f);
-    }
+   IEnumerator BackToMenu (int levelnumber) {
+      image.CrossFadeAlpha(1f, 0.5f, true);
+      canvasGroup.interactable = false;
+      canvasGroup.blocksRaycasts = false;
+      canvasGroup.alpha = 0;
+      image.CrossFadeAlpha(0f, 0.5f, true);
+      mainMenuPanel.SendMessage("BringToFront");
+      yield return new WaitForSeconds(1.0f);
+   }
 
-    private void loadGame()
-    {
-        canvasGroup.interactable = false;
-        StartCoroutine("CrossFade", 1);
-    }
+   private void loadGame () {
+      canvasGroup.interactable = false;
+      StartCoroutine("CrossFade", 1);
+   }
 
-    IEnumerator CrossFade(int levelnumber)
-    {
-        image.CrossFadeAlpha(1f, 1.0f, true);
-        yield return new WaitForSeconds(1.0f);
+   IEnumerator CrossFade (int levelnumber) {
+      image.CrossFadeAlpha(1f, 1.0f, true);
+      yield return new WaitForSeconds(1.0f);
       UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(levelnumber);
-    }
+   }
 
-    void BringToFront()
-    {
+   void BringToFront () {
       firstSelectedObjectInSelectionMenu.Select();
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
-        canvasGroup.alpha = 1;
-    }
+      canvasGroup.interactable = true;
+      canvasGroup.blocksRaycasts = true;
+      canvasGroup.alpha = 1;
+   }
 
 }

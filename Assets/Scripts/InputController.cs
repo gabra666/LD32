@@ -6,7 +6,7 @@ public class InputController : MonoBehaviour {
 
    private delegate void PlayerInputChecker ();
    private PlayerInputChecker playerInputChecker;
-   // Use this for initialization
+
    void Start () {
       movementController = gameObject.GetComponent<MovementController>();
       combatController = gameObject.GetComponent<CombatController>();
@@ -16,7 +16,6 @@ public class InputController : MonoBehaviour {
          playerInputChecker = new PlayerInputChecker(checkPlayer2Input);
    }
 
-   // Update is called once per frame
    void Update () {
       playerInputChecker();
    }
